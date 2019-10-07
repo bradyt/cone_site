@@ -1,17 +1,13 @@
-# Welcome to MkDocs
 
-For full documentation visit [mkdocs.org](https://mkdocs.org).
+Welcome to the wiki for the cone app.
 
-## Commands
+Currently there are TODOs listed at [TODOs](TODOs).
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs help` - Print this help message.
+Notes on setting up an environment for contributing are at
+[SETUP](SETUP).
 
-## Project layout
+Collecting diagrams to visualize the project at [Graphs](Graphs).
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+Similar apps [Mobile ledgers](Mobile-ledgers).
+
+A script for localizations: [Localizations](Localizations).
