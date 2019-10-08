@@ -4,14 +4,14 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="None">
         
         
-        <link rel="shortcut icon" href="img/favicon.ico">
-        <title>cone</title>
-        <link href="css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="css/font-awesome.min.css" rel="stylesheet">
-        <link href="css/base.css" rel="stylesheet">
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>SETUP - cone</title>
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -19,14 +19,14 @@
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
 
-        <script src="js/jquery-1.10.2.min.js" defer></script>
-        <script src="js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap-3.0.3.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/dart.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
 
-    <body class="homepage">
+    <body>
 
         <div class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="container">
@@ -40,30 +40,30 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href=".">cone</a>
+                    <a class="navbar-brand" href="..">cone</a>
                 </div>
 
                 <!-- Expanded navigation -->
                 <div class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
+                            <li >
+                                <a href="..">Home</a>
+                            </li>
+                            <li >
+                                <a href="../TODOs/">TODOs</a>
+                            </li>
                             <li class="active">
-                                <a href=".">Home</a>
+                                <a href="./">SETUP</a>
                             </li>
                             <li >
-                                <a href="TODOs/">TODOs</a>
+                                <a href="../Graphs/">Graphs</a>
                             </li>
                             <li >
-                                <a href="SETUP/">SETUP</a>
+                                <a href="../Mobile-ledgers/">Mobile ledgers</a>
                             </li>
                             <li >
-                                <a href="Graphs/">Graphs</a>
-                            </li>
-                            <li >
-                                <a href="Mobile-ledgers/">Mobile ledgers</a>
-                            </li>
-                            <li >
-                                <a href="Localizations/">Localizations</a>
+                                <a href="../Localizations/">Localizations</a>
                             </li>
                         </ul>
 
@@ -73,13 +73,13 @@
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
-                            <li class="disabled">
-                                <a rel="next" >
+                            <li >
+                                <a rel="next" href="../TODOs/">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li >
-                                <a rel="prev" href="TODOs/">
+                                <a rel="prev" href="../Graphs/">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -91,17 +91,67 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#a-few-notes-on-setting-up-an-environment-for-cone-development">A few notes on setting up an environment for cone development</a></li>
+        <li class="main "><a href="#linting">Linting</a></li>
+        <li class="main "><a href="#screenshots">Screenshots</a></li>
+        <li class="main "><a href="#notes-on-pushing-new-version-to-fdroid">Notes on pushing new version to fdroid</a></li>
+        <li class="main "><a href="#notes-on-pushing-new-version-to-google-play">Notes on pushing new version to google play</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<p>Welcome to the wiki for the cone app.</p>
-<p>Currently there are TODOs listed at <a href="TODOs">TODOs</a>.</p>
-<p>Notes on setting up an environment for contributing are at
-<a href="SETUP">SETUP</a>.</p>
-<p>Collecting diagrams to visualize the project at <a href="Graphs">Graphs</a>.</p>
-<p>Similar apps <a href="Mobile-ledgers">Mobile ledgers</a>.</p>
-<p>A script for localizations: <a href="Localizations">Localizations</a>.</p></div>
+<h1 id="a-few-notes-on-setting-up-an-environment-for-cone-development">A few notes on setting up an environment for cone development</h1>
+<ul>
+<li>go do the flutter install<ul>
+<li>which includes:<ul>
+<li>install flutter</li>
+<li>install android studio (see android docs if you want to avoid)</li>
+<li>install an emulator (optional)<ul>
+<li>which includes:<ul>
+<li>some confusing avd stuff</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>go to cone directory and try <code>flutter build apk</code></li>
+<li>if your computer has plenty of CPU and RAM, you can probably use an
+  Android emulator, otherwise, try<ul>
+<li>enable adb on your device</li>
+<li>either use a USB, or get the ip address of your phone and do
+   <code>adb connect &lt;ip-address&gt;:5555</code></li>
+</ul>
+</li>
+<li><code>flutter run</code></li>
+</ul>
+<h1 id="linting">Linting</h1>
+<p>Use for example, <code>flutter analyze --watch</code>.</p>
+<h1 id="screenshots">Screenshots</h1>
+<p>In one terminal, use <code>flutter run</code>, and note the observatory uri.</p>
+<p>In a second terminal, use</p>
+<pre><code>flutter screenshot --type=rasterizer --observatory-uri=&lt;uri-from-above&gt;
+</code></pre>
+
+<h1 id="notes-on-pushing-new-version-to-fdroid">Notes on pushing new version to fdroid</h1>
+<ul>
+<li>run fdroid executable from git</li>
+<li>fetch upstream, merge master</li>
+<li>update fdroiddata/metadata/info.tangential.cone.yml</li>
+<li><a href="https://gitlab.com/fdroid/fdroiddata/blob/master/CONTRIBUTING.md#building-it">https://gitlab.com/fdroid/fdroiddata/blob/master/CONTRIBUTING.md#building-it</a></li>
+</ul>
+<pre><code>fdroid checkupdates info.tangential.cone
+</code></pre>
+
+<h1 id="notes-on-pushing-new-version-to-google-play">Notes on pushing new version to google play</h1>
+<p>Make sure the app signing keys are available. Do a flutter clean to
+make sure the app builds cleanly. Then flutter build appbundle. I
+usually create an internal release, to make sure things install
+correctly. Then it's more or less a toggle to put it on google play.
+And I think the total time of waiting is from time of upload to the
+internal release, so no time is really lost.</p></div>
         </div>
 
         <footer class="col-md-12">
@@ -109,11 +159,11 @@
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script>
-            var base_url = ".",
+            var base_url = "..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="js/base.js" defer></script>
-        <script src="search/main.js" defer></script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
     <div class="modal-dialog">
@@ -181,8 +231,3 @@
 
     </body>
 </html>
-
-<!--
-MkDocs version : 1.0.4
-Build Date UTC : 2019-10-08 19:55:29
--->

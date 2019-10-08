@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>TODOs - cone</title>
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/dart.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="..">cone</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="..">Home</a>
+                            </li>
+                            <li class="active">
+                                <a href="./">TODOs</a>
+                            </li>
+                            <li >
+                                <a href="../SETUP/">SETUP</a>
+                            </li>
+                            <li >
+                                <a href="../Graphs/">Graphs</a>
+                            </li>
+                            <li >
+                                <a href="../Mobile-ledgers/">Mobile ledgers</a>
+                            </li>
+                            <li >
+                                <a href="../Localizations/">Localizations</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="..">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../SETUP/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#todo-soon">TODO soon</a></li>
+        <li class="main "><a href="#todo-later">TODO later</a></li>
+        <li class="main "><a href="#partially-done">partially done</a></li>
+        <li class="main "><a href="#done-or-partially-done-but-not-yet-on-master">DONE (or partially done) but not yet on master</a></li>
+        <li class="main "><a href="#done-but-not-yet-on-fdroid">DONE but not yet on fdroid</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h2 id="todo-soon">TODO soon</h2>
+<ul>
+<li>fix layout of project, with respect to a README, etc</li>
+<li>lift journal contents to a provider at top of widget tree, before
+  continuing on lifting more business logic out of presentation</li>
+</ul>
+<h2 id="todo-later">TODO later</h2>
+<ul>
+<li>
+<p>a note on some links about locales and amounts</p>
+<ul>
+<li><a href="https://community.appway.com/screen/kb/article/formatting-integers-according-to-locale-1482810848119">https://community.appway.com/screen/kb/article/formatting-integers-according-to-locale-1482810848119</a></li>
+<li><a href="https://www.w3.org/International/wiki/Locale-based_forms">https://www.w3.org/International/wiki/Locale-based_forms</a></li>
+<li><a href="https://docs.microsoft.com/en-us/globalization/locale/number-formatting">https://docs.microsoft.com/en-us/globalization/locale/number-formatting</a></li>
+<li><a href="https://docs.oracle.com/cd/E19455-01/806-0169/6j9hsml2h/index.html">https://docs.oracle.com/cd/E19455-01/806-0169/6j9hsml2h/index.html</a></li>
+<li><a href="https://developer.android.com/training/basics/supporting-devices/languages">https://developer.android.com/training/basics/supporting-devices/languages</a></li>
+</ul>
+</li>
+<li>
+<p>[ ] research Focus widgets, API, in hopes of some simplifications</p>
+</li>
+<li>[ ] try SelectableText</li>
+<li>[ ] try LicensePage widget</li>
+<li>[ ] try on raw key input to make TAB key work</li>
+<li>
+<p>[ ] planning on removing the complicated logic that tries to guess
+      at user's locale for initial value of default currency. it was
+      tangled with the logic to get the locale for language.</p>
+<ul>
+<li>maybe we can revisit this later with a property call that
+    doesn't require being in the MaterialApp context.</li>
+</ul>
+</li>
+<li>
+<p>[ ] now that we are allowing another mimetype, add heuristics</p>
+</li>
+<li>make mimetype viewable by user</li>
+<li>make contents of file viewable by user, even after the planned changes to homescreen</li>
+<li>add tests for different line endings, different file encodings, maybe even right to left text</li>
+<li>
+<p>experiment with heuristics for reasonable data. parsing the file
+    and finding transactions, etc, is one clue. but if the parsing is
+    only looking for positive results, as we do now, it's not telling
+    us if the ledger file is invalid.</p>
+<ul>
+<li>we could consider some existing dart tools<ul>
+<li><a href="https://pub.dev/packages/validators">https://pub.dev/packages/validators</a></li>
+<li><a href="https://pub.dev/packages?q=convert">https://pub.dev/packages?q=convert</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>[ ] look for idioms for clis written for dart apps</p>
+<ul>
+<li><a href="https://github.com/dart-lang/sdk/blob/master/runtime/bin/main_options.cc">https://github.com/dart-lang/sdk/blob/master/runtime/bin/main_options.cc</a></li>
+<li><a href="https://github.com/dart-lang/stagehand/blob/master/pubspec.yaml#L22">https://github.com/dart-lang/stagehand/blob/master/pubspec.yaml#L22</a></li>
+<li><a href="https://github.com/dart-lang/dartdoc/blob/master/bin/dartdoc.dart#L46">https://github.com/dart-lang/dartdoc/blob/master/bin/dartdoc.dart#L46</a></li>
+<li><a href="https://github.com/flutter/flutter/blob/master/packages/flutter_tools/bin/flutter_tools.dart#L7">https://github.com/flutter/flutter/blob/master/packages/flutter_tools/bin/flutter_tools.dart#L7</a></li>
+<li><a href="https://github.com/dart-lang/sdk/issues/26578">https://github.com/dart-lang/sdk/issues/26578</a>
+  a little discussion on distributing clis</li>
+<li><a href="https://github.com/dart-lang/sdk/wiki/Snapshots">https://github.com/dart-lang/sdk/wiki/Snapshots</a></li>
+<li><a href="https://dart.dev/tools/dart-vm#snapshot-option">https://dart.dev/tools/dart-vm#snapshot-option</a></li>
+</ul>
+</li>
+<li>
+<p>[ ] try flutter snapshots plugin to provide screenshots for fdroid</p>
+</li>
+<li>[ ] improve the addition of rows UI</li>
+<li>[ ] cleanup the date item</li>
+<li>[ ] try developing on desktop</li>
+<li>[ ] ensure app works at various</li>
+<li>[ ] improve logging in java channel</li>
+<li>
+<p>[ ] investigate all the methods leading up to the box issue, such as permissions, etc</p>
+</li>
+<li>
+<p>review fdroid build notes</p>
+<ul>
+<li><a href="https://gitlab.com/fdroid/fdroidserver/issues/511">https://gitlab.com/fdroid/fdroidserver/issues/511</a></li>
+<li><a href="https://gitlab.com/fdroid/fdroiddata/merge_requests/3739">https://gitlab.com/fdroid/fdroiddata/merge_requests/3739</a></li>
+<li>review the gradle build file</li>
+</ul>
+</li>
+<li>
+<p>[ ] press back twice to leave app from home page</p>
+</li>
+<li>[ ] determine if we can specify multiple mime types, or use a
+      heuristic to check if a file contains plain text</li>
+<li>[ ] refactor append to only look at previous contents, not edit. use
+      trim in transaction's print if needed</li>
+<li>[ ] add linting workflow suggestions</li>
+<li>[ ] improve selection of currencies, so users can search if they're
+      not sure the three letter code, for example Mexican Peso is MXN.</li>
+<li>[ ] add parser code</li>
+<li>[ ] continue efforts on user configurability of ledger location</li>
+<li>[ ] add notes on how to add a language to localizations</li>
+<li>currency issues<ul>
+<li>[ ] make widget resize to that of contained text</li>
+<li>[ ] qwerty option</li>
+<li>[ ] decimal separator</li>
+<li>[ ] combined amount and currency field</li>
+<li>[ ] transpose amount and currency fields<ul>
+<li>[x] in settings</li>
+<li>[ ] automatically based on symbol vs name</li>
+<li>[ ] with drag and drop</li>
+<li>[ ] with an option in data entry UI</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>[ ] maybe try <a href="https://pub.dev/packages/currency_icons or https://pub.dev/packages/country_icons">https://pub.dev/packages/currency_icons or https://pub.dev/packages/country_icons</a></li>
+<li>[ ] add tests</li>
+<li>[ ] start an ios branch</li>
+<li>[ ] research if there's better logging idioms than <code>print</code><ul>
+<li>some idiomatic might be described at <a href="https://medium.com/flutter-community/debugprint-and-the-power-of-hiding-and-customizing-your-logs-in-dart-86881df05929">https://medium.com/flutter-community/debugprint-and-the-power-of-hiding-and-customizing-your-logs-in-dart-86881df05929</a></li>
+</ul>
+</li>
+<li>[ ] research how fastlane might benefit project in early stages</li>
+<li>[ ] work on cli, to make working on parser easier</li>
+<li>[ ] allow user to make templates for faster data entry of common purchases</li>
+<li>[ ] add localization for Chinese, Russian, as desire is raised</li>
+<li>[ ] consider details at <a href="https://directory.fsf.org/wiki/Free_Software_Directory:Requirements">https://directory.fsf.org/wiki/Free_Software_Directory:Requirements</a></li>
+<li>[ ] <a href="https://www.gnu.org/licenses/gpl-howto.en.html">https://www.gnu.org/licenses/gpl-howto.en.html</a></li>
+<li>[ ] fill column</li>
+<li>[ ] basic offset</li>
+</ul>
+<h2 id="partially-done">partially done</h2>
+<ul>
+<li>[ ] clean up code in add transaction form</li>
+</ul>
+<h2 id="done-or-partially-done-but-not-yet-on-master">DONE (or partially done) but not yet on master</h2>
+<ul>
+<li>[x] update details of project to that of current <code>flutter create</code>
+      template</li>
+<li>[ ] refactor repo to contain flutter project, cli project, file
+      parsing project. ensure this refactoring is compatible with
+      f-droid, package managers, etc.</li>
+<li>[ ] work on parser</li>
+</ul>
+<h2 id="done-but-not-yet-on-fdroid">DONE but not yet on fdroid</h2></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

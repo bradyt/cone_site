@@ -4,14 +4,14 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="None">
         
         
-        <link rel="shortcut icon" href="img/favicon.ico">
-        <title>cone</title>
-        <link href="css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="css/font-awesome.min.css" rel="stylesheet">
-        <link href="css/base.css" rel="stylesheet">
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Graphs - cone</title>
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -19,14 +19,14 @@
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
 
-        <script src="js/jquery-1.10.2.min.js" defer></script>
-        <script src="js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap-3.0.3.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/dart.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
 
-    <body class="homepage">
+    <body>
 
         <div class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="container">
@@ -40,30 +40,30 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href=".">cone</a>
+                    <a class="navbar-brand" href="..">cone</a>
                 </div>
 
                 <!-- Expanded navigation -->
                 <div class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
+                            <li >
+                                <a href="..">Home</a>
+                            </li>
+                            <li >
+                                <a href="../TODOs/">TODOs</a>
+                            </li>
+                            <li >
+                                <a href="../SETUP/">SETUP</a>
+                            </li>
                             <li class="active">
-                                <a href=".">Home</a>
+                                <a href="./">Graphs</a>
                             </li>
                             <li >
-                                <a href="TODOs/">TODOs</a>
+                                <a href="../Mobile-ledgers/">Mobile ledgers</a>
                             </li>
                             <li >
-                                <a href="SETUP/">SETUP</a>
-                            </li>
-                            <li >
-                                <a href="Graphs/">Graphs</a>
-                            </li>
-                            <li >
-                                <a href="Mobile-ledgers/">Mobile ledgers</a>
-                            </li>
-                            <li >
-                                <a href="Localizations/">Localizations</a>
+                                <a href="../Localizations/">Localizations</a>
                             </li>
                         </ul>
 
@@ -73,13 +73,13 @@
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
-                            <li class="disabled">
-                                <a rel="next" >
+                            <li >
+                                <a rel="next" href="../SETUP/">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li >
-                                <a rel="prev" href="TODOs/">
+                                <a rel="prev" href="../Mobile-ledgers/">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -95,13 +95,17 @@
 </div></div>
                 <div class="col-md-9" role="main">
 
-<p>Welcome to the wiki for the cone app.</p>
-<p>Currently there are TODOs listed at <a href="TODOs">TODOs</a>.</p>
-<p>Notes on setting up an environment for contributing are at
-<a href="SETUP">SETUP</a>.</p>
-<p>Collecting diagrams to visualize the project at <a href="Graphs">Graphs</a>.</p>
-<p>Similar apps <a href="Mobile-ledgers">Mobile ledgers</a>.</p>
-<p>A script for localizations: <a href="Localizations">Localizations</a>.</p></div>
+<pre><code>pub global activate dcdg
+dcdg --package ../cone &gt; cone.uml
+
+brew install plantuml
+plantuml -tlatex cone.uml
+
+# pdflatex (e.g., MacTeX)
+pdflatex 
+</code></pre>
+
+<p><a href="/files/cone.pdf">cone.pdf</a></p></div>
         </div>
 
         <footer class="col-md-12">
@@ -109,11 +113,11 @@
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script>
-            var base_url = ".",
+            var base_url = "..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="js/base.js" defer></script>
-        <script src="search/main.js" defer></script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
     <div class="modal-dialog">
@@ -181,8 +185,3 @@
 
     </body>
 </html>
-
-<!--
-MkDocs version : 1.0.4
-Build Date UTC : 2019-10-08 19:55:29
--->
