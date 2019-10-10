@@ -7,9 +7,14 @@ theme:
         - dart
 
 nav:
-    - Home: index.md
-    - TODOs: TODOs.md
-    - SETUP: SETUP.md
-    - Graphs: Graphs.md
-    - Mobile ledgers: Mobile-ledgers.md
-    - Localizations: Localizations.md
+    - README: README.md
+    - wiki:
+        - Home: wiki/Home.md
+        - TODOs: wiki/TODOs.md
+        - SETUP: wiki/SETUP.md
+        - Graphs: wiki/Graphs.md
+        - Mobile ledgers: wiki/Mobile-ledgers.md
+        - Localizations: wiki/Localizations.md
+
+extra_css:
+  - 'css/extra.css'
