@@ -4,30 +4,30 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="None">
         
         
-        <link rel="shortcut icon" href="img/favicon.ico">
-        <title>cone</title>
-        <link href="css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="css/font-awesome.min.css" rel="stylesheet">
-        <link href="css/base.css" rel="stylesheet">
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>SETUP - cone</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
-        <link href="css/extra.css" rel="stylesheet">
+        <link href="../../css/extra.css" rel="stylesheet">
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
 
-        <script src="js/jquery-1.10.2.min.js" defer></script>
-        <script src="js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/dart.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
 
-    <body class="homepage">
+    <body>
 
         <div class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="container">
@@ -41,42 +41,42 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href=".">cone</a>
+                    <a class="navbar-brand" href="../..">cone</a>
                 </div>
 
                 <!-- Expanded navigation -->
                 <div class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
-                            <li class="active">
-                                <a href=".">README</a>
+                            <li >
+                                <a href="../..">README</a>
                             </li>
-                            <li class="dropdown">
+                            <li class="dropdown active">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">wiki <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li >
-    <a href="wiki/Home/">Home</a>
+    <a href="../Home/">Home</a>
 </li>
                                     
 <li >
-    <a href="wiki/TODOs/">TODOs</a>
+    <a href="../TODOs/">TODOs</a>
+</li>
+                                    
+<li class="active">
+    <a href="./">SETUP</a>
 </li>
                                     
 <li >
-    <a href="wiki/SETUP/">SETUP</a>
+    <a href="../Graphs/">Graphs</a>
 </li>
                                     
 <li >
-    <a href="wiki/Graphs/">Graphs</a>
+    <a href="../Mobile-ledgers/">Mobile ledgers</a>
 </li>
                                     
 <li >
-    <a href="wiki/Mobile-ledgers/">Mobile ledgers</a>
-</li>
-                                    
-<li >
-    <a href="wiki/Localizations/">Localizations</a>
+    <a href="../Localizations/">Localizations</a>
 </li>
                                 </ul>
                             </li>
@@ -88,13 +88,13 @@
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
-                            <li class="disabled">
-                                <a rel="next" >
+                            <li >
+                                <a rel="next" href="../TODOs/">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li >
-                                <a rel="prev" href="wiki/Home/">
+                                <a rel="prev" href="../Graphs/">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -106,36 +106,67 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#cone">cone</a></li>
-            <li><a href="#run-the-app-from-source">Run the app from source</a></li>
-            <li><a href="#donate">Donate</a></li>
+        <li class="main active"><a href="#a-few-notes-on-setting-up-an-environment-for-cone-development">A few notes on setting up an environment for cone development</a></li>
+        <li class="main "><a href="#linting">Linting</a></li>
+        <li class="main "><a href="#screenshots">Screenshots</a></li>
+        <li class="main "><a href="#notes-on-pushing-new-version-to-fdroid">Notes on pushing new version to fdroid</a></li>
+        <li class="main "><a href="#notes-on-pushing-new-version-to-google-play">Notes on pushing new version to google play</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="cone">cone</h1>
-<p>A mobile ledger-like.</p>
-<p><a href="https://play.google.com/store/apps/details?id=info.tangential.cone"><img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png"
-     alt="Get it on Google Play"
-     height="80"></a>
-<a href="https://f-droid.org/packages/info.tangential.cone/"><img src="https://f-droid.org/badge/get-it-on.png"
-     alt="Get it on F-Droid"
-     height="80"></a></p>
-<h2 id="run-the-app-from-source">Run the app from source</h2>
-<p>First, make sure to
-<a href="https://flutter.dev/docs/get-started/install">install</a>
-<a href="https://flutter.dev/">Flutter</a>.</p>
-<p>After that, you can <a href="https://flutter.dev/docs/get-started/test-drive?tab=terminal#run-the-app-2">run the
-app</a>
-from the root of the project.</p>
-<p>Replace <code>flutter run</code> with <code>flutter run --flavor=dev</code>. See
-https://github.com/flutter/flutter/issues/22856.</p>
-<h2 id="donate">Donate</h2>
+<h1 id="a-few-notes-on-setting-up-an-environment-for-cone-development">A few notes on setting up an environment for cone development</h1>
 <ul>
-<li>paypal: https://www.paypal.me/bradytrainor</li>
-<li>bitcoin: 3AVZKz1EFhKzU2wuqZmJzjercKBakRmpAR</li>
-<li>ethereum: 0x1c99F2E13B9BC204a70dbc8Add54b37Efdf24516</li>
-</ul></div>
+<li>go do the flutter install<ul>
+<li>which includes:<ul>
+<li>install flutter</li>
+<li>install android studio (see android docs if you want to avoid)</li>
+<li>install an emulator (optional)<ul>
+<li>which includes:<ul>
+<li>some confusing avd stuff</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>go to cone directory and try <code>flutter build apk</code></li>
+<li>if your computer has plenty of CPU and RAM, you can probably use an
+  Android emulator, otherwise, try<ul>
+<li>enable adb on your device</li>
+<li>either use a USB, or get the ip address of your phone and do
+   <code>adb connect &lt;ip-address&gt;:5555</code></li>
+</ul>
+</li>
+<li><code>flutter run</code></li>
+</ul>
+<h1 id="linting">Linting</h1>
+<p>Use for example, <code>flutter analyze --watch</code>.</p>
+<h1 id="screenshots">Screenshots</h1>
+<p>In one terminal, use <code>flutter run</code>, and note the observatory uri.</p>
+<p>In a second terminal, use</p>
+<pre><code>flutter screenshot --type=rasterizer --observatory-uri=&lt;uri-from-above&gt;
+</code></pre>
+
+<h1 id="notes-on-pushing-new-version-to-fdroid">Notes on pushing new version to fdroid</h1>
+<ul>
+<li>run fdroid executable from git</li>
+<li>fetch upstream, merge master</li>
+<li>update fdroiddata/metadata/info.tangential.cone.yml</li>
+<li><a href="https://gitlab.com/fdroid/fdroiddata/blob/master/CONTRIBUTING.md#building-it">https://gitlab.com/fdroid/fdroiddata/blob/master/CONTRIBUTING.md#building-it</a></li>
+</ul>
+<pre><code>fdroid checkupdates info.tangential.cone
+</code></pre>
+
+<h1 id="notes-on-pushing-new-version-to-google-play">Notes on pushing new version to google play</h1>
+<p>Make sure the app signing keys are available. Do a flutter clean to
+make sure the app builds cleanly. Then flutter build appbundle. I
+usually create an internal release, to make sure things install
+correctly. Then it's more or less a toggle to put it on google play.
+And I think the total time of waiting is from time of upload to the
+internal release, so no time is really lost.</p></div>
         </div>
 
         <footer class="col-md-12">
@@ -143,11 +174,11 @@ https://github.com/flutter/flutter/issues/22856.</p>
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script>
-            var base_url = ".",
+            var base_url = "../..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="js/base.js" defer></script>
-        <script src="search/main.js" defer></script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
     <div class="modal-dialog">
@@ -215,8 +246,3 @@ https://github.com/flutter/flutter/issues/22856.</p>
 
     </body>
 </html>
-
-<!--
-MkDocs version : 1.0.4
-Build Date UTC : 2019-10-10 06:34:58
--->
