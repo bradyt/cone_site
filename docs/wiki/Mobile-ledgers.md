@@ -31,6 +31,7 @@ Here are some of the projects pushing forward in this frontier.
     - Permissions: None
     - F-Droid: <https://f-droid.org/packages/info.tangential.cone/>
     - Google Play: <https://play.google.com/store/apps/details?id=info.tangential.cone>
+    - Website: <https://cone.tangential.info>
     - Source: <https://github.com/bradyt/cone/>
     - Made with:
         - [Dart][d], [Wikipedia][dw]
