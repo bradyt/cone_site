@@ -11,3 +11,5 @@ Collecting diagrams to visualize the project at [Graphs](../Graphs).
 Similar apps [Mobile ledgers](../Mobile-ledgers).
 
 A script for localizations: [Localizations](../Localizations).
+
+A draft of some notes is at [Notes](../Notes).

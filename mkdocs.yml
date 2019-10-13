@@ -15,6 +15,7 @@ nav:
         - Graphs: wiki/Graphs.md
         - Mobile ledgers: wiki/Mobile-ledgers.md
         - Localizations: wiki/Localizations.md
+        - Notes: wiki/Notes.md
 
 extra_css:
   - 'css/extra.css'
