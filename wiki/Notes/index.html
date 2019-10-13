@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>Mobile ledgers - cone</title>
+        <title>Notes - cone</title>
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -71,16 +71,16 @@
     <a href="../Graphs/">Graphs</a>
 </li>
                                     
-<li class="active">
-    <a href="./">Mobile ledgers</a>
+<li >
+    <a href="../Mobile-ledgers/">Mobile ledgers</a>
 </li>
                                     
 <li >
     <a href="../Localizations/">Localizations</a>
 </li>
                                     
-<li >
-    <a href="../Notes/">Notes</a>
+<li class="active">
+    <a href="./">Notes</a>
 </li>
                                 </ul>
                             </li>
@@ -93,12 +93,12 @@
                             </a>
                         </li>
                             <li >
-                                <a rel="next" href="../Graphs/">
+                                <a rel="next" href="../Localizations/">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
-                            <li >
-                                <a rel="prev" href="../Localizations/">
+                            <li class="disabled">
+                                <a rel="prev" >
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -114,82 +114,117 @@
 </div></div>
                 <div class="col-md-9" role="main">
 
-<p>The ecosystem of mobile-friendly plain text ledger apps is very young.
-Here are some of the projects pushing forward in this frontier.</p>
-<p>(Similar lists are kept at
-<a href="https://plaintextaccounting.org/#ui-mobile">https://plaintextaccounting.org/#ui-mobile</a> and
-<a href="https://hledger.org/mobile-apps.html">https://hledger.org/mobile-apps.html</a>.)</p>
+<p>This page is drafted notes on my understanding of text accounting.</p>
+<p>I will also be reading more at <a href="https://hledger.org/accounting-links.html">https://hledger.org/accounting-links.html</a>.</p>
+<p>Some of the quotes below are from links found there.</p>
+<p>The text below is some reading I've done on the choice in text
+accounting for the following topics:</p>
 <ul>
-<li>Beancount Ionic<ul>
-<li>Status: "This project is currently NOT ready for end-user use!"</li>
-<li>Source: <a href="https://gitlab.com/alex_ford/beancount-ionic">https://gitlab.com/alex_ford/beancount-ionic</a></li>
-<li>Made with:<ul>
-<li><a href="https://www.typescriptlang.org">Typescript</a>, <a href="https://wikipedia.org/wiki/TypeScript">Wikipedia</a></li>
-<li><a href="https://angular.io">Angular</a>, <a href="https://wikipedia.org/wiki/Angular_%28web_framework%29">Wikipedia</a></li>
-<li><a href="https://ionicframework.com">Ionic</a>, <a href="https://wikipedia.org/wiki/Ionic_%28mobile_app_framework%29">Wikipedia</a></li>
+<li>top level accounts</li>
+<li>accounting equation</li>
+<li>debit vs credit</li>
 </ul>
-</li>
+<p>I'd like to do a little more research on</p>
+<ul>
+<li>choice of "income" instead of "revenue"</li>
+<li>what the concept of equity maps to in various contexts</li>
 </ul>
-</li>
-<li>Beancount Mobile<ul>
-<li>Permissions: Read and write to external storage</li>
-<li>Google Play: <a href="https://play.google.com/store/apps/details?id=link.beancount.mobile">https://play.google.com/store/apps/details?id=link.beancount.mobile</a></li>
-<li>Source: <a href="https://github.com/xuhcc/beancount-mobile">https://github.com/xuhcc/beancount-mobile</a></li>
-<li>Made with:<ul>
-<li><a href="https://www.typescriptlang.org">Typescript</a>, <a href="https://wikipedia.org/wiki/TypeScript">Wikipedia</a></li>
-<li><a href="https://angular.io">Angular</a>, <a href="https://wikipedia.org/wiki/Angular_%28web_framework%29">Wikipedia</a></li>
-<li><a href="https://www.nativescript.org">NativeScript</a>, <a href="https://wikipedia.org/wiki/NativeScript">Wikipedia</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Cashier<ul>
-<li>PWA: <a href="https://cashier.alensiljak.eu.org/favourites">https://cashier.alensiljak.eu.org/favourites</a></li>
-<li>Source: <a href="https://gitlab.com/alensiljak/cashier">https://gitlab.com/alensiljak/cashier</a></li>
-<li>Made with:<ul>
-<li><a href="https://wikipedia.org/wiki/JavaScript">Javascript</a></li>
-<li><a href="https://vuejs.org">Vue</a>, <a href="https://wikipedia.org/wiki/Vue.js">Wikipedia</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>cone<ul>
-<li>Permissions: None</li>
-<li>F-Droid: <a href="https://f-droid.org/packages/info.tangential.cone/">https://f-droid.org/packages/info.tangential.cone/</a></li>
-<li>Google Play: <a href="https://play.google.com/store/apps/details?id=info.tangential.cone">https://play.google.com/store/apps/details?id=info.tangential.cone</a></li>
-<li>Website: <a href="https://cone.tangential.info">https://cone.tangential.info</a></li>
-<li>Source: <a href="https://github.com/bradyt/cone/">https://github.com/bradyt/cone/</a></li>
-<li>Made with:<ul>
-<li><a href="https://dart.dev">Dart</a>, <a href="https://en.wikipedia.org/wiki/Dart_%28programming_language%29">Wikipedia</a></li>
-<li><a href="https://flutter.dev">Flutter</a>, <a href="https://wikipedia.org/wiki/Flutter_%28software%29">Wikipedia</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Ledger Expense Tracking<ul>
-<li>Status: "This app is in development. It may be unstable."</li>
-<li>Google Play: <a href="https://play.google.com/store/apps/details?id=com.mpease.ledger">https://play.google.com/store/apps/details?id=com.mpease.ledger</a></li>
-<li>Source: <a href="https://github.com/jduepmeier/ledger-app">https://github.com/jduepmeier/ledger-app</a></li>
-<li>Made with:<ul>
-<li><a href="https://en.wikipedia.org/wiki/Java_%28programming_language%29">Java</a></li>
-<li><a href="https://developer.android.com">Android SDK</a>, <a href="https://wikipedia.org/wiki/Android_software_development">Wikipedia</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>MoLe<ul>
-<li>Status: "MoLe is known to work with hledger-web versions 1.10 and 1.14."</li>
-<li>Permissions: Internet</li>
-<li>F-Droid: <a href="https://f-droid.org/en/packages/net.ktnx.mobileledger/">https://f-droid.org/en/packages/net.ktnx.mobileledger/</a></li>
-<li>Website: <a href="https://mole.ktnx.net">https://mole.ktnx.net</a></li>
-<li>Made with:<ul>
-<li><a href="https://en.wikipedia.org/wiki/Java_%28programming_language%29">Java</a></li>
-<li><a href="https://developer.android.com">Android SDK</a>, <a href="https://wikipedia.org/wiki/Android_software_development">Wikipedia</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul></div>
+<p>The following post suggests that Quicken already had the same four main
+accounts, from
+<a href="https://community.quicken.com/discussion/7107529/faq-accounting-101">https://community.quicken.com/discussion/7107529/faq-accounting-101</a>.</p>
+<blockquote>
+<p>Asset, Liability, Income, and Expense.</p>
+</blockquote>
+<p>It's possible GnuCash was influenced in this by Quicken, or at least,
+we see, from <a href="https://en.wikipedia.org/wiki/GnuCash">https://en.wikipedia.org/wiki/GnuCash</a>.</p>
+<blockquote>
+<p>It was initially aimed at developing capabilities similar to Intuit,
+Inc.'s Quicken application,</p>
+</blockquote>
+<p>We see below that GnuCash seems to take the same four accounts, and
+starts to write accounting equations, and adds some implicit
+interpretation of "equity" to these.</p>
+<p>From section 2.1.3 of
+<a href="https://www.gnucash.org/docs/v3/C/gnucash-guide/basics-accounting1.html">https://www.gnucash.org/docs/v3/C/gnucash-guide/basics-accounting1.html</a>,
+we see they distinguish between a "static accounting equation",</p>
+<blockquote>
+<p>Assets - Liabilities = Equity</p>
+</blockquote>
+<p>and a dynamic accounting equation,</p>
+<blockquote>
+<p>Assets - Liabilities = Equity + (Income - Expenses)</p>
+</blockquote>
+<p>or their "rearranged accounting equation",</p>
+<blockquote>
+<p>Assets + Expenses = Liabilities + Equity + Income</p>
+</blockquote>
+<p>Note the table following that, describing how to use debit/credit
+terminology.</p>
+<table>
+<thead>
+<tr>
+<th>account type</th>
+<th>debit</th>
+<th>credit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>assets</td>
+<td>increase</td>
+<td>decrease</td>
+</tr>
+<tr>
+<td>expenses</td>
+<td>increase</td>
+<td>decrease</td>
+</tr>
+<tr>
+<td>liabilities</td>
+<td>decrease</td>
+<td>increase</td>
+</tr>
+<tr>
+<td>equity</td>
+<td>decrease</td>
+<td>increase</td>
+</tr>
+<tr>
+<td>income</td>
+<td>decrease</td>
+<td>increase</td>
+</tr>
+</tbody>
+</table>
+<p>Presumably, when John Wiegley invented text accounting in 2003, he
+modified the signs of these accounts, so that the equation becomes,</p>
+<blockquote>
+<p>Assets + Liabilities + Equity + Income + Expenses = 0</p>
+</blockquote>
+<p>This has a few nice side effects.</p>
+<ol>
+<li>The equation is simpler</li>
+<li>The signs of values in transactions are easier to write</li>
+<li>A mnemonic for debit vs credit is easier</li>
+</ol>
+<p>Regarding debit vs credit, consider the following quote from
+"Algebraic Models for Accounting Systems".</p>
+<blockquote>
+<p>There is an important comment to be made regarding signs: for the
+entries of a balance vector can be positive or negative. The great
+advantage of using positive and negative signs is that the signs
+take care of questions of credit or debit automatically; for
+example, a credit balance has a positive sign and a debit balance a
+negative one.</p>
+</blockquote>
+<p>In other words, we can simply identify debit postings when the amount
+is positive, and credit postings when the amount is negative.</p>
+<p>For example, consider in the follow text transaction, the comments
+indicating debit vs credit.</p>
+<pre><code class="text">2000-01-01
+    account1   10 USD ; debit
+    account2  -10 USD ; credit
+</code></pre></div>
         </div>
 
         <footer class="col-md-12">
