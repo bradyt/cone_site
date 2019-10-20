@@ -82,7 +82,7 @@ With the above top level accounts, and the fact that transactions must
 balance, this implies the following equation will hold.
 
 \[
-\text{assets} + \text{liabilites} + \text{equity} + \text{income} + \text{expenses} = 0.
+\text{assets} + \text{liabilities} + \text{equity} + \text{income} + \text{expenses} = 0.
 \]
 
 ### Signed numbers versus debit/credit
@@ -119,7 +119,7 @@ Consider that GnuCash docs provide the DSU variant of our accounting
 equation above, reproduced here.
 
 \[
-\text{Assets} + \text{Expenses} = \text{Liabilites} + \text{Equity} + \text{Income}.
+\text{Assets} + \text{Expenses} = \text{Liabilities} + \text{Equity} + \text{Income}.
 \]
 
 ### Equity and net income
@@ -128,7 +128,7 @@ There appears to be a discrepancy. Wikipedia writes the accounting
 equation as,
 
 \[
-\text{Assets} = \text{Liabilites} + \text{Equity}.
+\text{Assets} = \text{Liabilities} + \text{Equity}.
 \]
 
 So why do our accounting equations above have two extra terms, income
