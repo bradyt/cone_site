@@ -219,7 +219,7 @@ Now we can check our balances again.
 
 By closing the books, we have restored the usual accounting equation.
 That is, for our SSS system in plain text accounting, the following
-equation is solved.
+equation is true again.
 
 \[
 \text{assets} + \text{liabilities} + \text{equity} = 0.
@@ -239,3 +239,9 @@ Notes to improve page:
 - Try `ledger equity '(income|expenses)'` to improve
   previous section
 - Reseach docs, commits, issue history, for equity/close command
+- Consider summarizing that none of this is really necessary, you
+  adhere to workflows and rules that work for your own personal
+  accounting, and/or, what workflows and habits you find others have
+  succeeded with. The intention of article was to emphasize the above
+  concepts do not lead to significant discrepancies between concepts
+  in standard accounting and plain text accounting.
