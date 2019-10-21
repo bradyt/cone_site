@@ -20,7 +20,9 @@ So for now, here you are.
 - [Plain Text Accounting](https://plaintextaccounting.org)
 - ledger docs
     - [Stating where money goes](https://www.ledger-cli.org/3.0/doc/ledger3.html#Stating-where-money-goes)
+    - [Archiving Previous Years](https://www.ledger-cli.org/3.0/doc/ledger3.html#Archiving-Previous-Years)
 - hledger docs
+    - [hledger#close](https://hledger.org/hledger.html#close)
     - [hledger accounting links](https://hledger.org/accounting-links.html#theory)
         - [Rambaud et al., Algebraic Models for Accounting Systems](https://www.maa.org/press/maa-reviews/algebraic-models-for-accounting-systems)
         - [Ellerman, On Double-Entry Bookkeeping: The Mathematical Treatment](http://www.ellerman.org/wp-content/uploads/2014/11/DEB-MathTreatment-reprint.pdf)
