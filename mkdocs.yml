@@ -22,3 +22,8 @@ extra_javascript:
 
 markdown_extensions:
     - mdx_math
+    - pymdownx.snippets:
+        base_path: docs
+
+extra_css:
+  - css/org-mode.css
