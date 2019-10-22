@@ -335,23 +335,62 @@ equation is true again.</p>
 </script>
 </p>
 <h3 id="plain-text-accounting-closing">Plain text accounting closing</h3>
-<p>To be continued...</p>
-<p>(Maybe, plain text accountants don't need the exact same notion
-of closing books. But I'd like to continue writing this article at a
-later date, so I will stop my research here, and deploy the article as
-is for now.)</p>
-<p>Notes to improve page:</p>
-<ul>
-<li>Try <code>ledger equity '(income|expenses)'</code> to improve
-  previous section</li>
-<li>Reseach docs, commits, issue history, for equity/close command</li>
-<li>Consider summarizing that none of this is really necessary, you
-  adhere to workflows and rules that work for your own personal
-  accounting, and/or, what workflows and habits you find others have
-  succeeded with. The intention of article was to emphasize the above
-  concepts do not lead to significant discrepancies between concepts
-  in standard accounting and plain text accounting.</li>
-</ul></div>
+<p>It would be possible to generate the closing transaction above with
+hledger's <code>close</code> command,</p>
+<pre><code class="text">&gt; hledger close income expenses --closing | sed -e 's/closing balances/retained earnings/'
+2000-01-31 retained earnings
+  expenses:rent              -5 USD = 0 USD
+  income:employer            10 USD = 0 USD
+  equity:retained earnings   -5 USD
+</code></pre>
+
+<p>The examples I found do it a little differently, filtering on assets
+and liabilities, and using this to close assets and liabilities in the
+previous period's ledger file, and reopen just those accounts in the
+next period's file.</p>
+<pre><code class="text">&gt; hledger close assets liabilities
+2000-01-31 closing balances
+  assets:checking            -5 USD = 0 USD
+  equity:closing balances     5 USD
+
+2000-02-01 opening balances
+  assets:checking             5 USD = 5 USD
+  equity:opening balances    -5 USD
+</code></pre>
+
+<p>In some sense, this is implicitly closing net income and adding it to
+equity.</p>
+<p>To prove this, we denote the original account values as,</p>
+<p>
+<script type="math/tex; mode=display">
+\text{assets}, \text{liabilities}, \text{equity}, \text{income}, \text{expenses}.
+</script>
+</p>
+<p>And the equity value in the new file as,</p>
+<p>
+<script type="math/tex; mode=display">
+\text{equity}'.
+</script>
+</p>
+<p>Then note that,</p>
+<p>
+<script type="math/tex; mode=display">
+\text{assets} + \text{liabilities} + \text{equity} + \text{income} + \text{expenses} = 0.
+</script>
+</p>
+<p>and</p>
+<p>
+<script type="math/tex; mode=display">
+\text{assets} + \text{liabilities} + \text{equity}' = 0.
+</script>
+</p>
+<p>It quickly follows that,</p>
+<p>
+<script type="math/tex; mode=display">
+\text{equity}' = \text{equity} + \text{income} + \text{expenses}.
+</script>
+</p>
+<p>In other words, net income has been added to equity.</p></div>
         </div>
 
         <footer class="col-md-12">
