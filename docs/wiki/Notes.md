@@ -229,21 +229,64 @@ equation is true again.
 
 ### Plain text accounting closing
 
-To be continued...
+It would be possible to generate the closing transaction above with
+hledger's `close` command,
 
-(Maybe, plain text accountants don't need the exact same notion
-of closing books. But I'd like to continue writing this article at a
-later date, so I will stop my research here, and deploy the article as
-is for now.)
+``` text
+> hledger close income expenses --closing | sed -e 's/closing balances/retained earnings/'
+2000-01-31 retained earnings
+  expenses:rent              -5 USD = 0 USD
+  income:employer            10 USD = 0 USD
+  equity:retained earnings   -5 USD
+```
 
-Notes to improve page:
+The examples I found do it a little differently, filtering on assets
+and liabilities, and using this to close assets and liabilities in the
+previous period's ledger file, and reopen just those accounts in the
+next period's file.
 
-- Try `ledger equity '(income|expenses)'` to improve
-  previous section
-- Reseach docs, commits, issue history, for equity/close command
-- Consider summarizing that none of this is really necessary, you
-  adhere to workflows and rules that work for your own personal
-  accounting, and/or, what workflows and habits you find others have
-  succeeded with. The intention of article was to emphasize the above
-  concepts do not lead to significant discrepancies between concepts
-  in standard accounting and plain text accounting.
+``` text
+> hledger close assets liabilities
+2000-01-31 closing balances
+  assets:checking            -5 USD = 0 USD
+  equity:closing balances     5 USD
+
+2000-02-01 opening balances
+  assets:checking             5 USD = 5 USD
+  equity:opening balances    -5 USD
+```
+
+In some sense, this is implicitly closing net income and adding it to
+equity.
+
+To prove this, we denote the original account values as,
+
+\[
+\text{assets}, \text{liabilities}, \text{equity}, \text{income}, \text{expenses}.
+\]
+
+And the equity value in the new file as,
+
+\[
+\text{equity}'.
+\]
+
+Then note that,
+
+\[
+\text{assets} + \text{liabilities} + \text{equity} + \text{income} + \text{expenses} = 0.
+\]
+
+and
+
+\[
+\text{assets} + \text{liabilities} + \text{equity}' = 0.
+\]
+
+It quickly follows that,
+
+\[
+\text{equity}' = \text{equity} + \text{income} + \text{expenses}.
+\]
+
+In other words, net income has been added to equity.
