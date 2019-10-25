@@ -119,6 +119,7 @@
             <li><a href="#equity-and-net-income">Equity and net income</a></li>
             <li><a href="#zeroing-out-net-income">Zeroing out net income</a></li>
             <li><a href="#plain-text-accounting-closing">Plain text accounting closing</a></li>
+            <li><a href="#a-proof">A proof</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
@@ -132,6 +133,11 @@ summary of what the topic will be, despite several attempts.</p>
 <li><a href="https://groups.google.com/d/topic/ledger-cli/k0ZRUfBWvL4/discussion">Ledger and the accountancy equation</a></li>
 <li><a href="https://groups.google.com/d/topic/ledger-cli/1F1prbDAn3s/discussion">Confusion about a few things</a></li>
 <li><a href="https://groups.google.com/d/topic/ledger-cli/uvBjsHrwzAY/discussion">New option for Debit/Credit reports: --dc</a></li>
+<li><a href="https://groups.google.com/forum/#!topic/ledger-cli/XCWNBpMtgp8/discussion">Re: new name for hledger-equity.hs ?</a></li>
+</ul>
+</li>
+<li>hledger Google Groups<ul>
+<li><a href="https://groups.google.com/forum/#!topic/hledger/TeBp1ymz1RA/discussion">new name for hledger-equity.hs ?</a></li>
 </ul>
 </li>
 <li>money.stackexchange.com<ul>
@@ -360,37 +366,99 @@ next period's file.</p>
 
 <p>In some sense, this is implicitly closing net income and adding it to
 equity.</p>
-<p>To prove this, we denote the original account values as,</p>
+<p>To illustrate what we mean, let's consider another example.</p>
+<pre><code class="text">2000-01-01 opening balance
+  assets:checking          5 USD
+  equity:opening balance  -5 USD
+
+2000-01-15 paycheck
+  assets:checking          7 USD
+  income:employer         -7 USD
+</code></pre>
+
+<p>Then note our equity is now -5 USD, and our net income is -7 USD.</p>
+<p>With the hledger approach, we have,</p>
+<pre><code class="text">&gt; hledger close assets liabilities
+2000-01-31 closing balances
+    assets:checking                 -12 USD = 0 USD
+    equity:closing balances          12 USD
+
+2000-02-01 opening balances
+    assets:checking                  12 USD = 12 USD
+    equity:opening balances         -12 USD
+</code></pre>
+
+<p>So now we have the new equity equal to the old equity plus net income,
+that is, -5 + (-7) = -12.</p>
+<h3 id="a-proof">A proof</h3>
+<p>Let's see if we can add notation, and state and prove a more precise
+claim, corresponding with the claim made in the previous section.</p>
+<p>Our example will be that of two files, one with an ongoing record of
+transactions, and at end of period, we will add transactions to
+facilitate recording the next period to the new file.</p>
+<p>We consider three moments in time, or locations in the text ledger
+files, really. The first is at the end of the previous period, but
+before the closing transaction. The second moment we consider is after
+the closing transaction for that period, but in that same file. The
+third and final moment we consider, is after the opening transaction
+for the next period, in the new file.</p>
+<p>We denote the account balances for each moment with the following
+notation, that is, assets, liabilities, equity, income, and expenses,
+for each of the three moments, in order.</p>
 <p>
 <script type="math/tex; mode=display">
-\text{assets}, \text{liabilities}, \text{equity}, \text{income}, \text{expenses}.
+A, L, E, I, X,\\
+A', L', E', I', X',\\
+A'', L'', E'', I'', X''.
 </script>
 </p>
-<p>And the equity value in the new file as,</p>
+<p>We can now state our claim more precisely.</p>
+<p>We claim that with the above scenario, and notation, that,</p>
 <p>
 <script type="math/tex; mode=display">
-\text{equity}'.
+\begin{align*}
+E'' &= E + I + X, \\
+I'' &= 0, \\
+X'' &= 0.
+\end{align*}
 </script>
 </p>
-<p>Then note that,</p>
+<p>In other words, considering the two moments, before closing, and after
+opening, we are in some sense, closing the net income and adding to
+equity.</p>
+<p>We don't need it for our proof, but perhaps for clarity, we provide
+following to denote the closing transaction.</p>
+<pre><code class="text">2000-01-31 closing
+  A' = A - A = 0
+  L' = L - L = 0
+  E' = E + (A + L)
+  I' = I
+  X' = X
+</code></pre>
+
+<p>And the opening transaction we denote as,</p>
+<pre><code class="text">2000-02-01 opening
+  A'' = A
+  L'' = L
+  E'' = -(A + L)
+  I'' = 0
+  X'' = 0
+</code></pre>
+
+<p>We take as given that <script type="math/tex">A + L + E + I + X = 0</script>. Then since <script type="math/tex">A + L +
+E'' = 0</script>, it quickly follows that,</p>
 <p>
 <script type="math/tex; mode=display">
-\text{assets} + \text{liabilities} + \text{equity} + \text{income} + \text{expenses} = 0.
+\begin{align*}
+E'' &= E + I + X, \\
+I'' &= 0, \\
+X'' &= 0,
+\end{align*}
 </script>
 </p>
-<p>and</p>
-<p>
-<script type="math/tex; mode=display">
-\text{assets} + \text{liabilities} + \text{equity}' = 0.
-</script>
-</p>
-<p>It quickly follows that,</p>
-<p>
-<script type="math/tex; mode=display">
-\text{equity}' = \text{equity} + \text{income} + \text{expenses}.
-</script>
-</p>
-<p>In other words, net income has been added to equity.</p></div>
+<p>as was claimed.</p>
+<p>In other words, for hledger's prevailing close examples, in some
+sense, net income was closed and added to equity.</p></div>
         </div>
 
         <footer class="col-md-12">

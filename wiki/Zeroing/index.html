@@ -4,30 +4,30 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="None">
         
         
-        <link rel="shortcut icon" href="img/favicon.ico">
-        <title>cone</title>
-        <link href="css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="css/font-awesome.min.css" rel="stylesheet">
-        <link href="css/base.css" rel="stylesheet">
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Zeroing - cone</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
-        <link href="css/org-mode.css" rel="stylesheet">
+        <link href="../../css/org-mode.css" rel="stylesheet">
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
 
-        <script src="js/jquery-1.10.2.min.js" defer></script>
-        <script src="js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/dart.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
 
-    <body class="homepage">
+    <body>
 
         <div class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="container">
@@ -41,46 +41,46 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href=".">cone</a>
+                    <a class="navbar-brand" href="../..">cone</a>
                 </div>
 
                 <!-- Expanded navigation -->
                 <div class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
-                            <li class="active">
-                                <a href=".">README</a>
+                            <li >
+                                <a href="../..">README</a>
                             </li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">wiki <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li >
-    <a href="wiki/Home/">Home</a>
+    <a href="../Home/">Home</a>
 </li>
                                     
 <li >
-    <a href="wiki/TODOs/">TODOs</a>
+    <a href="../TODOs/">TODOs</a>
 </li>
                                     
 <li >
-    <a href="wiki/SETUP/">SETUP</a>
+    <a href="../SETUP/">SETUP</a>
 </li>
                                     
 <li >
-    <a href="wiki/Graphs/">Graphs</a>
+    <a href="../Graphs/">Graphs</a>
 </li>
                                     
 <li >
-    <a href="wiki/Mobile-ledgers/">Mobile ledgers</a>
+    <a href="../Mobile-ledgers/">Mobile ledgers</a>
 </li>
                                     
 <li >
-    <a href="wiki/Localizations/">Localizations</a>
+    <a href="../Localizations/">Localizations</a>
 </li>
                                     
 <li >
-    <a href="wiki/Notes/">Notes</a>
+    <a href="../Notes/">Notes</a>
 </li>
                                 </ul>
                             </li>
@@ -92,16 +92,6 @@
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
-                            <li class="disabled">
-                                <a rel="next" >
-                                    <i class="fa fa-arrow-left"></i> Previous
-                                </a>
-                            </li>
-                            <li >
-                                <a rel="prev" href="wiki/Home/">
-                                    Next <i class="fa fa-arrow-right"></i>
-                                </a>
-                            </li>
                     </ul>
                 </div>
             </div>
@@ -110,48 +100,49 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#cone">cone</a></li>
-            <li><a href="#projects-source-code">Project's source code</a></li>
-            <li><a href="#run-the-app-from-source">Run the app from source</a></li>
-            <li><a href="#donate">Donate</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="cone">cone</h1>
-<p>A mobile ledger-like.</p>
-<p><a href="https://play.google.com/store/apps/details?id=info.tangential.cone"><img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png"
-     alt="Get it on Google Play"
-     height="80"></a>
-<a href="https://f-droid.org/packages/info.tangential.cone/"><img src="https://f-droid.org/badge/get-it-on.png"
-     alt="Get it on F-Droid"
-     height="80"></a></p>
-<h2 id="projects-source-code">Project's source code</h2>
-<p>The source is available at <a href="https://github.com/bradyt/cone">https://github.com/bradyt/cone</a>.</p>
-<p>There is a <code>cone_android/</code> directory where the Flutter code for the
-Android app is.</p>
-<p>The <code>cone_lib/</code> directory contains Dart library code that could
-potentially be used for each of mobile apps, cli app, and maybe even
-web and desktop apps.</p>
-<p>There is also a <code>uri_picker/</code> directory, which contains a Flutter
-plugin for linking a file to the Android cone app. We'll attempt to
-extend that plugin to an iOS app. Not certain what will happen for
-web or desktop yet.</p>
-<h2 id="run-the-app-from-source">Run the app from source</h2>
-<p>First, make sure to
-<a href="https://flutter.dev/docs/get-started/install">install</a>
-<a href="https://flutter.dev/">Flutter</a>.</p>
-<p>After that, you can <a href="https://flutter.dev/docs/get-started/test-drive?tab=terminal#run-the-app-2">run the
-app</a>
-from the <code>cone_android/</code> directory.</p>
-<p>Replace <code>flutter run</code> with <code>flutter run --flavor=dev</code>. See
-<a href="https://github.com/flutter/flutter/issues/22856">https://github.com/flutter/flutter/issues/22856</a>.</p>
-<h2 id="donate">Donate</h2>
-<ul>
-<li>paypal: <a href="https://www.paypal.me/bradytrainor">https://www.paypal.me/bradytrainor</a></li>
-<li>bitcoin: 3AVZKz1EFhKzU2wuqZmJzjercKBakRmpAR</li>
-<li>ethereum: 0x1c99F2E13B9BC204a70dbc8Add54b37Efdf24516</li>
-</ul></div>
+<p>In this note, we show that, for prevailing hledger close examples, the
+net income is, in some sense, closed out and added to equity, as it
+seems classical accounting would desire.</p>
+<p>First, we establish some notation. Then we will state the precise
+claim, and then prove it.</p>
+<p>Notation:</p>
+<p>There are three points in time that we want to give names of variables for, that is, </p>
+<ol>
+<li>in the previous period's file, before closing</li>
+<li>in the previous period's file, after closing</li>
+<li>in the next period's file, after opening</li>
+</ol>
+<p>So, for the first moment, we label the accounts A, L, E, I, X.</p>
+<p>For the second, we label them,  A'', L'', E'', I'', X''.</p>
+<p>And for the third, A', L', E', I', X'</p>
+<p>Claim:</p>
+<p>With the above notation, the following equations hold,</p>
+<p>E' = E + I + X,
+  I' = 0,
+  X' = 0.</p>
+<p>In other words, the net income has been closed out and added to equity.</p>
+<p>Proof:</p>
+<p>The closing transaction is,</p>
+<p>2000-01-31 closing
+  A'' = A - A = 0
+  L'' = L - L = 0
+  E'' = E + (A + L)
+  I'' = I
+  X'' = X</p>
+<p>The opening transaction is,</p>
+<p>2000-02-01 opening
+  A' = A
+  L' = L
+  E' = -(A + L)
+  I' = 0
+  X' = 0</p>
+<p>Note that A + L + E' = 0. Then since A + L + E + I + X = 0, it follows that,</p>
+<p>E' - E = I + X.</p>
+<p>And since I' = X' = 0, we've proved our claim.</p></div>
         </div>
 
         <footer class="col-md-12">
@@ -159,12 +150,12 @@ from the <code>cone_android/</code> directory.</p>
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script>
-            var base_url = ".",
+            var base_url = "../..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="js/base.js" defer></script>
+        <script src="../../js/base.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" defer></script>
-        <script src="search/main.js" defer></script>
+        <script src="../../search/main.js" defer></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
     <div class="modal-dialog">
@@ -232,8 +223,3 @@ from the <code>cone_android/</code> directory.</p>
 
     </body>
 </html>
-
-<!--
-MkDocs version : 1.0.4
-Build Date UTC : 2019-10-25 14:47:47
--->

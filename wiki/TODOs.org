@@ -2,43 +2,30 @@
 
 # (org-export-to-file 'html "TODOs.html" nil nil nil t)
 
-** TODO soon
-   :PROPERTIES:
-   :CUSTOM_ID: todo-soon
-   :END:
+* new todos (attempt to clean up old todos)
 
-- fix layout of project, with respect to a README, etc
-- lift journal contents to a provider at top of widget tree, before
-  continuing on lifting more business logic out of presentation
-
-** TODO later
-   :PROPERTIES:
-   :CUSTOM_ID: todo-later
-   :END:
-
+- [ ] consider adding following links to wiki notes
+  - [[https://groups.google.com/forum/#!topic/ledger-cli/iVkcAOYo7Ag/discussion][Resetting income/expense accounts to zero yearly..]]
+  - [[https://groups.google.com/forum/#!topic/ledger-cli/M5T_H-bxGh0/discussion][Automated transaction with variable amount]]
+- [ ] try to do some grouping of recently sorted todos below
+- [ ] IRC user reports transaction with no description is not display
+  in home page (previously reported as issue with commodity)
+- [ ] if file only has an empty line, then a transaction, cone treats
+  it as a comment.
+- [ ] improve layout of wiki
+- [ ] pull recent additions to business logic into cone_lib
 - a note on some links about locales and amounts
-
   - [[https://community.appway.com/screen/kb/article/formatting-integers-according-to-locale-1482810848119]]
   - [[https://www.w3.org/International/wiki/Locale-based_forms]]
   - [[https://docs.microsoft.com/en-us/globalization/locale/number-formatting]]
   - [[https://docs.oracle.com/cd/E19455-01/806-0169/6j9hsml2h/index.html]]
   - [[https://developer.android.com/training/basics/supporting-devices/languages]]
+- [ ] research Focus widgets, API, in hopes of some simplifications
+- [ ] try SelectableText
+- [ ] try LicensePage widget
+- [ ] try on raw key input to make TAB key work
 
-- ☐ research Focus widgets, API, in hopes of some simplifications
-
-- ☐ try SelectableText
-
-- ☐ try LicensePage widget
-
-- ☐ try on raw key input to make TAB key work
-
-- ☐ planning on removing the complicated logic that tries to guess at
-  user's locale for initial value of default currency. it was tangled
-  with the logic to get the locale for language. - maybe we can revisit
-  this later with a property call that doesn't require being in the
-  MaterialApp context.
-
-- ☐ now that we are allowing another mimetype, add heuristics
+- [ ] now that we are allowing another mimetype, add heuristics
 
   - make mimetype viewable by user
   - make contents of file viewable by user, even after the planned
@@ -55,7 +42,7 @@
       - [[https://pub.dev/packages/validators]]
       - [[https://pub.dev/packages?q=convert]]
 
-- ☐ look for idioms for clis written for dart apps
+- [ ] look for idioms for clis written for dart apps
 
   - [[https://github.com/dart-lang/sdk/blob/master/runtime/bin/main_options.cc]]
   - [[https://github.com/dart-lang/stagehand/blob/master/pubspec.yaml#L22]]
@@ -66,19 +53,25 @@
   - [[https://github.com/dart-lang/sdk/wiki/Snapshots]]
   - [[https://dart.dev/tools/dart-vm#snapshot-option]]
 
-- ☐ try flutter snapshots plugin to provide screenshots for fdroid
+* old todos
+** TODO later
+   :PROPERTIES:
+   :CUSTOM_ID: todo-later
+   :END:
 
-- ☐ improve the addition of rows UI
+- [ ] try flutter snapshots plugin to provide screenshots for fdroid
 
-- ☐ cleanup the date item
+- [ ] improve the addition of rows UI
 
-- ☐ try developing on desktop
+- [ ] cleanup the date item
 
-- ☐ ensure app works at various
+- [ ] try developing on desktop
 
-- ☐ improve logging in java channel
+- [ ] ensure app works at various
 
-- ☐ investigate all the methods leading up to the box issue, such as
+- [ ] improve logging in java channel
+
+- [ ] investigate all the methods leading up to the box issue, such as
   permissions, etc
 
 - review fdroid build notes
@@ -87,87 +80,83 @@
   - [[https://gitlab.com/fdroid/fdroiddata/merge_requests/3739]]
   - review the gradle build file
 
-- ☐ press back twice to leave app from home page
+- [ ] press back twice to leave app from home page
 
-- ☐ determine if we can specify multiple mime types, or use a heuristic
+- [ ] determine if we can specify multiple mime types, or use a heuristic
   to check if a file contains plain text
 
-- ☐ refactor append to only look at previous contents, not edit. use
+- [ ] refactor append to only look at previous contents, not edit. use
   trim in transaction's print if needed
 
-- ☐ add linting workflow suggestions
+- [ ] add linting workflow suggestions
 
-- ☐ improve selection of currencies, so users can search if they're not
+- [ ] improve selection of currencies, so users can search if they're not
   sure the three letter code, for example Mexican Peso is MXN.
 
-- ☐ add parser code
+- [ ] add parser code
 
-- ☐ continue efforts on user configurability of ledger location
+- [ ] continue efforts on user configurability of ledger location
 
-- ☐ add notes on how to add a language to localizations
+- [ ] add notes on how to add a language to localizations
 
 - currency issues
 
-  - ☐ make widget resize to that of contained text
-  - ☐ qwerty option
-  - ☐ decimal separator
-  - ☐ combined amount and currency field
-  - ☐ transpose amount and currency fields
+  - [ ] make widget resize to that of contained text
+  - [ ] qwerty option
+  - [ ] decimal separator
+  - [ ] combined amount and currency field
+  - [ ] transpose amount and currency fields
 
-    - ☒ in settings
-    - ☐ automatically based on symbol vs name
-    - ☐ with drag and drop
-    - ☐ with an option in data entry UI
+    - [X] in settings
+    - [ ] automatically based on symbol vs name
+    - [ ] with drag and drop
+    - [ ] with an option in data entry UI
 
-- ☐ maybe try <https://pub.dev/packages/currency_icons or
+- [ ] maybe try <https://pub.dev/packages/currency_icons or
   https://pub.dev/packages/country_icons>
 
-- ☐ add tests
+- [ ] add tests
 
-- ☐ start an ios branch
+- [ ] start an ios branch
 
-- ☐ research if there's better logging idioms than =print= - some
+- [ ] research if there's better logging idioms than =print= - some
   idiomatic might be described at
   [[https://medium.com/flutter-community/debugprint-and-the-power-of-hiding-and-customizing-your-logs-in-dart-86881df05929]]
 
-- ☐ research how fastlane might benefit project in early stages
+- [ ] research how fastlane might benefit project in early stages
 
-- ☐ work on cli, to make working on parser easier
+- [ ] work on cli, to make working on parser easier
 
-- ☐ allow user to make templates for faster data entry of common
+- [ ] allow user to make templates for faster data entry of common
   purchases
 
-- ☐ add localization for Chinese, Russian, as desire is raised
+- [ ] add localization for Chinese, Russian, as desire is raised
 
-- ☐ consider details at
+- [ ] consider details at
   [[https://directory.fsf.org/wiki/Free_Software_Directory:Requirements]]
 
-- ☐ [[https://www.gnu.org/licenses/gpl-howto.en.html]]
+- [ ] [[https://www.gnu.org/licenses/gpl-howto.en.html]]
 
-- ☐ fill column
+- [ ] fill column
 
-- ☐ basic offset
+- [ ] basic offset
 
 ** partially done
    :PROPERTIES:
    :CUSTOM_ID: partially-done
    :END:
 
-- ☐ clean up code in add transaction form
+- [ ] clean up code in add transaction form
 
 ** DONE (or partially done) but not yet on master
    :PROPERTIES:
    :CUSTOM_ID: done-or-partially-done-but-not-yet-on-master
    :END:
 
-- ☒ update details of project to that of current =flutter create=
+- [X] update details of project to that of current =flutter create=
   template
-- ☐ refactor repo to contain flutter project, cli project, file parsing
+- [ ] refactor repo to contain flutter project, cli project, file parsing
   project. ensure this refactoring is compatible with f-droid, package
   managers, etc.
-- ☐ work on parser
+- [ ] work on parser
 
-** DONE but not yet on fdroid
-   :PROPERTIES:
-   :CUSTOM_ID: done-but-not-yet-on-fdroid
-   :END:
