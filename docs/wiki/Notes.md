@@ -9,6 +9,9 @@ So for now, here you are.
     - [Ledger and the accountancy equation](https://groups.google.com/d/topic/ledger-cli/k0ZRUfBWvL4/discussion)
     - [Confusion about a few things](https://groups.google.com/d/topic/ledger-cli/1F1prbDAn3s/discussion)
     - [New option for Debit/Credit reports: --dc](https://groups.google.com/d/topic/ledger-cli/uvBjsHrwzAY/discussion)
+    - [Re: new name for hledger-equity.hs ?](https://groups.google.com/forum/#!topic/ledger-cli/XCWNBpMtgp8/discussion)
+- hledger Google Groups
+    - [new name for hledger-equity.hs ?](https://groups.google.com/forum/#!topic/hledger/TeBp1ymz1RA/discussion)
 - money.stackexchange.com
     - [What is the Equity account for in GnuCash](https://money.stackexchange.com/questions/56484/what-is-the-equity-account-for-in-gnucash)
     - [In double entry accounting, how does income become equity?](https://money.stackexchange.com/questions/23994/in-double-entry-accounting-how-does-income-become-equity?noredirect=1&lq=1)
@@ -259,34 +262,113 @@ next period's file.
 In some sense, this is implicitly closing net income and adding it to
 equity.
 
-To prove this, we denote the original account values as,
+To illustrate what we mean, let's consider another example.
+
+``` text
+2000-01-01 opening balance
+  assets:checking          5 USD
+  equity:opening balance  -5 USD
+  
+2000-01-15 paycheck
+  assets:checking          7 USD
+  income:employer         -7 USD
+```
+
+Then note our equity is now -5 USD, and our net income is -7 USD.
+
+With the hledger approach, we have,
+
+``` text
+> hledger close assets liabilities
+2000-01-31 closing balances
+    assets:checking                 -12 USD = 0 USD
+    equity:closing balances          12 USD
+
+2000-02-01 opening balances
+    assets:checking                  12 USD = 12 USD
+    equity:opening balances         -12 USD
+```
+
+So now we have the new equity equal to the old equity plus net income,
+that is, -5 + (-7) = -12.
+
+### A proof
+
+Let's see if we can add notation, and state and prove a more precise
+claim, corresponding with the claim made in the previous section.
+
+Our example will be that of two files, one with an ongoing record of
+transactions, and at end of period, we will add transactions to
+facilitate recording the next period to the new file.
+
+We consider three moments in time, or locations in the text ledger
+files, really. The first is at the end of the previous period, but
+before the closing transaction. The second moment we consider is after
+the closing transaction for that period, but in that same file. The
+third and final moment we consider, is after the opening transaction
+for the next period, in the new file.
+
+We denote the account balances for each moment with the following
+notation, that is, assets, liabilities, equity, income, and expenses,
+for each of the three moments, in order.
 
 \[
-\text{assets}, \text{liabilities}, \text{equity}, \text{income}, \text{expenses}.
+A, L, E, I, X,\\
+A', L', E', I', X',\\
+A'', L'', E'', I'', X''.
 \]
 
-And the equity value in the new file as,
+We can now state our claim more precisely.
+
+We claim that with the above scenario, and notation, that,
 
 \[
-\text{equity}'.
+\begin{align*}
+E'' &= E + I + X, \\
+I'' &= 0, \\
+X'' &= 0.
+\end{align*}
 \]
 
-Then note that,
+In other words, considering the two moments, before closing, and after
+opening, we are in some sense, closing the net income and adding to
+equity.
+
+We don't need it for our proof, but perhaps for clarity, we provide
+following to denote the closing transaction.
+
+``` text
+2000-01-31 closing
+  A' = A - A = 0
+  L' = L - L = 0
+  E' = E + (A + L)
+  I' = I
+  X' = X
+```
+
+And the opening transaction we denote as,
+
+``` text
+2000-02-01 opening
+  A'' = A
+  L'' = L
+  E'' = -(A + L)
+  I'' = 0
+  X'' = 0
+```
+
+We take as given that \(A + L + E + I + X = 0\). Then since \(A + L +
+E'' = 0\), it quickly follows that,
 
 \[
-\text{assets} + \text{liabilities} + \text{equity} + \text{income} + \text{expenses} = 0.
+\begin{align*}
+E'' &= E + I + X, \\
+I'' &= 0, \\
+X'' &= 0,
+\end{align*}
 \]
 
-and
+as was claimed.
 
-\[
-\text{assets} + \text{liabilities} + \text{equity}' = 0.
-\]
-
-It quickly follows that,
-
-\[
-\text{equity}' = \text{equity} + \text{income} + \text{expenses}.
-\]
-
-In other words, net income has been added to equity.
+In other words, for hledger's prevailing close examples, in some
+sense, net income was closed and added to equity.

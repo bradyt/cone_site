@@ -37,9 +37,3 @@ from the `cone_android/` directory.
 
 Replace `flutter run` with `flutter run --flavor=dev`. See
 <https://github.com/flutter/flutter/issues/22856>.
-
-## Donate
-
-- paypal: <https://www.paypal.me/bradytrainor>
-- bitcoin: 3AVZKz1EFhKzU2wuqZmJzjercKBakRmpAR
-- ethereum: 0x1c99F2E13B9BC204a70dbc8Add54b37Efdf24516
