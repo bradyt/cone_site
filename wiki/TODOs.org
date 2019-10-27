@@ -4,6 +4,7 @@
 
 * new todos (attempt to clean up old todos)
 
+- [ ] present the three states for Notes.md as file diffs?
 - [ ] consider adding following links to wiki notes
   - [[https://groups.google.com/forum/#!topic/ledger-cli/iVkcAOYo7Ag/discussion][Resetting income/expense accounts to zero yearly..]]
   - [[https://groups.google.com/forum/#!topic/ledger-cli/M5T_H-bxGh0/discussion][Automated transaction with variable amount]]
@@ -22,6 +23,9 @@
   - [[https://developer.android.com/training/basics/supporting-devices/languages]]
 - [ ] research Focus widgets, API, in hopes of some simplifications
 - [ ] try SelectableText
+  - https://www.youtube.com/watch?v=ZSU3ZXOs6hc
+- [ ] try DataTable
+  - https://www.youtube.com/watch?v=ktTajqbhIcY&list=PLjxrf2q8roU23XGwz3Km7sQZFTdB996iG&index=57
 - [ ] try LicensePage widget
 - [ ] try on raw key input to make TAB key work
 
