@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>Mobile ledgers - cone</title>
+        <title>Links - cone</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -47,11 +47,11 @@
 </li>
                                     
 <li>
-    <a href="../Links/" class="dropdown-item">Links</a>
+    <a href="./" class="dropdown-item active">Links</a>
 </li>
                                     
 <li>
-    <a href="./" class="dropdown-item active">Mobile ledgers</a>
+    <a href="../Mobile-ledgers/" class="dropdown-item">Mobile ledgers</a>
 </li>
                                     
 <li>
@@ -89,12 +89,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../Links/" class="nav-link">
+                                <a rel="prev" href="../Features/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../Notes/" class="nav-link">
+                                <a rel="next" href="../Mobile-ledgers/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -118,86 +118,38 @@
     
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#links" class="nav-link">Links</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#popular-plain-text-ledgers" class="nav-link">Popular plain text ledgers</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#additional-manuals-reference" class="nav-link">Additional manuals, reference</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
         </ul>
     </div>
 </div></div>
                     <div class="col-md-9" role="main">
 
-<p>The ecosystem of mobile-friendly plain text ledger apps is very young.
-Here are some of the projects pushing forward in this frontier.</p>
-<p>(Similar lists are kept at
-<a href="https://plaintextaccounting.org/#ui-mobile">https://plaintextaccounting.org/#ui-mobile</a> and
-<a href="https://hledger.org/mobile-apps.html">https://hledger.org/mobile-apps.html</a>.)</p>
+<h1 id="links">Links</h1>
+<h2 id="popular-plain-text-ledgers">Popular plain text ledgers</h2>
 <ul>
-<li>Beancount Ionic<ul>
-<li>Status: "This project is currently NOT ready for end-user use!"</li>
-<li>Source: <a href="https://gitlab.com/alex_ford/beancount-ionic">https://gitlab.com/alex_ford/beancount-ionic</a></li>
-<li>Made with:<ul>
-<li><a href="https://www.typescriptlang.org">Typescript</a>, <a href="https://wikipedia.org/wiki/TypeScript">Wikipedia</a></li>
-<li><a href="https://angular.io">Angular</a>, <a href="https://wikipedia.org/wiki/Angular_%28web_framework%29">Wikipedia</a></li>
-<li><a href="https://ionicframework.com">Ionic</a>, <a href="https://wikipedia.org/wiki/Ionic_%28mobile_app_framework%29">Wikipedia</a></li>
+<li><a href="https://www.ledger-cli.org/">Ledger</a> - The original, from 2003</li>
+<li><a href="https://hledger.org/">hledger</a> - Haskell implementation</li>
+<li><a href="http://furius.ca/beancount/">beancount</a> - Python implementation</li>
 </ul>
-</li>
-</ul>
-</li>
-<li>Beancount Mobile<ul>
-<li>Permissions: Read and write to external storage</li>
-<li>Google Play: <a href="https://play.google.com/store/apps/details?id=link.beancount.mobile">https://play.google.com/store/apps/details?id=link.beancount.mobile</a></li>
-<li>Source: <a href="https://github.com/xuhcc/beancount-mobile">https://github.com/xuhcc/beancount-mobile</a></li>
-<li>Made with:<ul>
-<li><a href="https://www.typescriptlang.org">Typescript</a>, <a href="https://wikipedia.org/wiki/TypeScript">Wikipedia</a></li>
-<li><a href="https://angular.io">Angular</a>, <a href="https://wikipedia.org/wiki/Angular_%28web_framework%29">Wikipedia</a></li>
-<li><a href="https://www.nativescript.org">NativeScript</a>, <a href="https://wikipedia.org/wiki/NativeScript">Wikipedia</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Cashier<ul>
-<li>PWA: <a href="https://cashier.alensiljak.eu.org/favourites">https://cashier.alensiljak.eu.org/favourites</a></li>
-<li>Source: <a href="https://gitlab.com/alensiljak/cashier">https://gitlab.com/alensiljak/cashier</a></li>
-<li>Made with:<ul>
-<li><a href="https://wikipedia.org/wiki/JavaScript">Javascript</a></li>
-<li><a href="https://vuejs.org">Vue</a>, <a href="https://wikipedia.org/wiki/Vue.js">Wikipedia</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>cone<ul>
-<li>Permissions: None</li>
-<li>F-Droid: <a href="https://f-droid.org/packages/info.tangential.cone/">https://f-droid.org/packages/info.tangential.cone/</a></li>
-<li>Google Play: <a href="https://play.google.com/store/apps/details?id=info.tangential.cone">https://play.google.com/store/apps/details?id=info.tangential.cone</a></li>
-<li>Website: <a href="https://cone.tangential.info">https://cone.tangential.info</a></li>
-<li>Source: <a href="https://github.com/bradyt/cone/">https://github.com/bradyt/cone/</a></li>
-<li>Made with:<ul>
-<li><a href="https://dart.dev">Dart</a>, <a href="https://en.wikipedia.org/wiki/Dart_%28programming_language%29">Wikipedia</a></li>
-<li><a href="https://flutter.dev">Flutter</a>, <a href="https://wikipedia.org/wiki/Flutter_%28software%29">Wikipedia</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Ledger Expense Tracking<ul>
-<li>Status: "This app is in development. It may be unstable."</li>
-<li>Google Play: <a href="https://play.google.com/store/apps/details?id=com.mpease.ledger">https://play.google.com/store/apps/details?id=com.mpease.ledger</a></li>
-<li>Source: <a href="https://github.com/jduepmeier/ledger-app">https://github.com/jduepmeier/ledger-app</a></li>
-<li>Made with:<ul>
-<li><a href="https://en.wikipedia.org/wiki/Java_%28programming_language%29">Java</a></li>
-<li><a href="https://developer.android.com">Android SDK</a>, <a href="https://wikipedia.org/wiki/Android_software_development">Wikipedia</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>MoLe<ul>
-<li>Status: "MoLe is known to work with hledger-web versions 1.10 and 1.14."</li>
-<li>Permissions: Internet</li>
-<li>F-Droid: <a href="https://f-droid.org/en/packages/net.ktnx.mobileledger/">https://f-droid.org/en/packages/net.ktnx.mobileledger/</a></li>
-<li>Website: <a href="https://mole.ktnx.net">https://mole.ktnx.net</a></li>
-<li>Made with:<ul>
-<li><a href="https://en.wikipedia.org/wiki/Java_%28programming_language%29">Java</a></li>
-<li><a href="https://developer.android.com">Android SDK</a>, <a href="https://wikipedia.org/wiki/Android_software_development">Wikipedia</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<h2 id="additional-manuals-reference">Additional manuals, reference</h2>
+<ul>
+<li><a href="https://plaintextaccounting.org/">Plain Text Accounting</a></li>
+<li><a href="https://xuhcc.github.io/beancount-docs/">Beancount Documentation</a> -
+  Beancount User's Manual converted from Google Docs to markdown, and
+  deployed via Mkdocs</li>
+<li><a href="https://www.ledger-cli.org/3.0/doc/ledger3.html">Ledger manual</a></li>
 </ul></div>
             </div>
         </div>

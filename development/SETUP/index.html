@@ -43,6 +43,14 @@
                                 <ul class="dropdown-menu">
                                     
 <li>
+    <a href="../../wiki/Features/" class="dropdown-item">Features</a>
+</li>
+                                    
+<li>
+    <a href="../../wiki/Links/" class="dropdown-item">Links</a>
+</li>
+                                    
+<li>
     <a href="../../wiki/Mobile-ledgers/" class="dropdown-item">Mobile ledgers</a>
 </li>
                                     
@@ -56,11 +64,11 @@
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../TODOs/" class="dropdown-item">TODOs</a>
+    <a href="./" class="dropdown-item active">SETUP</a>
 </li>
                                     
 <li>
-    <a href="./" class="dropdown-item active">SETUP</a>
+    <a href="../TODOs/" class="dropdown-item">TODOs</a>
 </li>
                                     
 <li>
@@ -81,12 +89,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../TODOs/" class="nav-link">
+                                <a rel="prev" href="../../wiki/Notes/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../Graphs/" class="nav-link">
+                                <a rel="next" href="../TODOs/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -111,18 +119,12 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="2"><a href="#projects-source-code" class="nav-link">Project's source code</a>
+            <li class="nav-item" data-level="1"><a href="#source-code" class="nav-link">Source code</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#run-app-from-source" class="nav-link">Run app from source</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            
-            <li class="nav-item" data-level="2"><a href="#run-the-app-from-source" class="nav-link">Run the app from source</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            
-            <li class="nav-item" data-level="1"><a href="#a-few-notes-on-setting-up-an-environment-for-cone-development" class="nav-link">A few notes on setting up an environment for cone development</a>
-              <ul class="nav flex-column">
               </ul>
             </li>
             
@@ -162,53 +164,36 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h2 id="projects-source-code">Project's source code</h2>
-<p>The source is available at <a href="https://github.com/bradyt/cone">https://github.com/bradyt/cone</a>.</p>
-<p>There is a <code>cone_android/</code> directory where the Flutter code for the
-Android app is.</p>
-<p>The <code>cone_lib/</code> directory contains Dart library code that could
-potentially be used for each of mobile apps, cli app, and maybe even
-web and desktop apps.</p>
-<p>There is also a <code>uri_picker/</code> directory, which contains a Flutter
-plugin for linking a file to the Android cone app. We'll attempt to
-extend that plugin to an iOS app. Not certain what will happen for
-web or desktop yet.</p>
-<h2 id="run-the-app-from-source">Run the app from source</h2>
-<p>First, make sure to
-<a href="https://flutter.dev/docs/get-started/install">install</a>
-<a href="https://flutter.dev/">Flutter</a>.</p>
-<p>After that, you can <a href="https://flutter.dev/docs/get-started/test-drive?tab=terminal#run-the-app-2">run the
-app</a>
-from the <code>cone_android/</code> directory.</p>
-<p>Replace <code>flutter run</code> with <code>flutter run --flavor=dev</code>. See
-<a href="https://github.com/flutter/flutter/issues/22856">https://github.com/flutter/flutter/issues/22856</a>.</p>
-<h1 id="a-few-notes-on-setting-up-an-environment-for-cone-development">A few notes on setting up an environment for cone development</h1>
-<ul>
-<li>go do the flutter install<ul>
-<li>which includes:<ul>
-<li>install flutter</li>
-<li>install android studio (see android docs if you want to avoid)</li>
-<li>install an emulator (optional)<ul>
-<li>which includes:<ul>
-<li>some confusing avd stuff</li>
+<h1 id="source-code">Source code</h1>
+<p>Source code is available at <a href="https://github.com/bradyt/cone">https://github.com/bradyt/cone</a>.</p>
+<h2 id="run-app-from-source">Run app from source</h2>
+<ol>
+<li><a href="https://flutter.dev/docs/get-started/install">Install flutter</a>. This should include the following:<ul>
+<li>Modifying <code>PATH</code></li>
+<li>Checking <code>flutter doctor</code></li>
+<li>Android setup (including, Android device and/or Android emulator)</li>
 </ul>
 </li>
+<li>To verify your flutter setup, you can skip to the <a href="https://flutter.dev/docs/get-started/test-drive?tab=terminal">test
+   drive</a>.
+   Note that I don't find it important to setup some editor, but
+   rather, to make sure flutter works from your terminal. Note that
+   this step includes the following:<ul>
+<li>Check <code>flutter devices</code></li>
 </ul>
 </li>
-</ul>
-</li>
-</ul>
-</li>
-<li>go to cone directory and try <code>flutter build apk</code></li>
-<li>if your computer has plenty of CPU and RAM, you can probably use an
-  Android emulator, otherwise, try<ul>
-<li>enable adb on your device</li>
-<li>either use a USB, or get the ip address of your phone and do
-   <code>adb connect &lt;ip-address&gt;:5555</code></li>
-</ul>
-</li>
-<li><code>flutter run</code></li>
-</ul>
+<li><code>git clone https://github.com/bradyt/cone</code></li>
+<li><code>cd cone/cone_flutter</code></li>
+<li><code>flutter run --flavor=dev --device &lt;see flutter devices&gt;</code>
+   (Regarding flavor, see
+   <a href="https://github.com/flutter/flutter/issues/22856">https://github.com/flutter/flutter/issues/22856</a>)</li>
+</ol>
+<p>You can substitute for some of the steps above if you'd like to try
+<code>--device macos</code> or <code>--device chrome</code>, etc, but those are not
+officially supported yet; for example, macos and web are not on
+Flutter's stable branch yet. I have been using <code>--device macos</code>
+locally to make some development easier. There is no file provider on
+web, we need a solution.</p>
 <h1 id="linting">Linting</h1>
 <p>Use for example, <code>flutter analyze --watch</code>.</p>
 <h1 id="screenshots">Screenshots</h1>
