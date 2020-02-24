@@ -8,3 +8,6 @@ todos:
 
 watch:
 	ls docs/development/TODOs.org | entr -c make
+
+deploy:
+	mkdocs gh-deploy
