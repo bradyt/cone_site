@@ -113,7 +113,10 @@
         <li class="main active"><a href="#a-few-notes-on-setting-up-an-environment-for-cone-development">A few notes on setting up an environment for cone development</a></li>
         <li class="main "><a href="#linting">Linting</a></li>
         <li class="main "><a href="#screenshots">Screenshots</a></li>
-        <li class="main "><a href="#notes-on-pushing-new-version-to-fdroid">Notes on pushing new version to fdroid</a></li>
+        <li class="main "><a href="#notes-on-fdroid">Notes on fdroid</a></li>
+            <li><a href="#make-sure-cone-builds-on-fdroid">Make sure cone builds on fdroid</a></li>
+            <li><a href="#modifying-the-metadata-and-fdroiddata">Modifying the metadata and fdroiddata</a></li>
+            <li><a href="#new-notes-on-fdroid">New notes on fdroid</a></li>
         <li class="main "><a href="#notes-on-pushing-new-version-to-google-play">Notes on pushing new version to google play</a></li>
     </ul>
 </div></div>
@@ -154,16 +157,33 @@
 <pre><code>flutter screenshot --type=rasterizer --observatory-uri=&lt;uri-from-above&gt;
 </code></pre>
 
-<h1 id="notes-on-pushing-new-version-to-fdroid">Notes on pushing new version to fdroid</h1>
-<ul>
-<li>run fdroid executable from git</li>
-<li>fetch upstream, merge master</li>
-<li>update fdroiddata/metadata/info.tangential.cone.yml</li>
-<li><a href="https://gitlab.com/fdroid/fdroiddata/blob/master/CONTRIBUTING.md#building-it">https://gitlab.com/fdroid/fdroiddata/blob/master/CONTRIBUTING.md#building-it</a></li>
-</ul>
-<pre><code>fdroid checkupdates info.tangential.cone
+<h1 id="notes-on-fdroid">Notes on fdroid</h1>
+<h2 id="make-sure-cone-builds-on-fdroid">Make sure cone builds on fdroid</h2>
+<p>As described at <a href="https://gitlab.com/fdroid/fdroiddata/blob/master/CONTRIBUTING.md#building-it">https://gitlab.com/fdroid/fdroiddata/blob/master/CONTRIBUTING.md#building-it</a>, verify the following command runs successfully.</p>
+<pre><code>fdroid build -v -l info.tangential.cone
 </code></pre>
 
+<p>If it breaks, we either need to change the cone project, or the metadata at fdroiddata.</p>
+<h2 id="modifying-the-metadata-and-fdroiddata">Modifying the metadata and fdroiddata</h2>
+<ul>
+<li>run fdroid executable from git</li>
+<li>fetch upstream fdroiddata, merge master</li>
+<li>update fdroiddata/metadata/info.tangential.cone.yml</li>
+<li>run all the checks outlined at <a href="https://gitlab.com/fdroid/fdroiddata/blob/master/CONTRIBUTING.md#building-it">https://gitlab.com/fdroid/fdroiddata/blob/master/CONTRIBUTING.md#building-it</a></li>
+</ul>
+<pre><code>fdroid readmeta
+fdroid rewritemeta info.tangential.cone
+fdroid checkupdates info.tangential.cone
+fdroid lint info.tangential.cone
+fdroid build -v -l info.tangential.cone
+</code></pre>
+
+<h2 id="new-notes-on-fdroid">New notes on fdroid</h2>
+<p>Mostly we need to make sure the build still works on fdroid. Use the following:</p>
+<pre><code>fdroid -v -l info.tangential.cone
+</code></pre>
+
+<p>This is suggested by fdroiddata documentation, <code>CONTRIBUTING.md</code>.</p>
 <h1 id="notes-on-pushing-new-version-to-google-play">Notes on pushing new version to google play</h1>
 <p>Make sure the app signing keys are available. Do a flutter clean to
 make sure the app builds cleanly. Then flutter build appbundle. I
