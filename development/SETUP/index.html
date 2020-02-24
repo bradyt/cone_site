@@ -36,15 +36,28 @@
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
                             <li class="navitem">
-                                <a href="../.." class="nav-link">README</a>
+                                <a href="../.." class="nav-link">Home</a>
                             </li>
-                            <li class="dropdown active">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">wiki <b class="caret"></b></a>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Wiki <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../Home/" class="dropdown-item">Home</a>
+    <a href="../../wiki/Home.md" class="dropdown-item">Home</a>
 </li>
+                                    
+<li>
+    <a href="../../wiki/Mobile-ledgers/" class="dropdown-item">Mobile ledgers</a>
+</li>
+                                    
+<li>
+    <a href="../../wiki/Notes/" class="dropdown-item">Notes</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Development <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
                                     
 <li>
     <a href="../TODOs/" class="dropdown-item">TODOs</a>
@@ -59,15 +72,7 @@
 </li>
                                     
 <li>
-    <a href="../Mobile-ledgers/" class="dropdown-item">Mobile ledgers</a>
-</li>
-                                    
-<li>
     <a href="../Localizations/" class="dropdown-item">Localizations</a>
-</li>
-                                    
-<li>
-    <a href="../Notes/" class="dropdown-item">Notes</a>
 </li>
                                 </ul>
                             </li>
@@ -110,6 +115,16 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
+            <li class="nav-item" data-level="2"><a href="#projects-source-code" class="nav-link">Project's source code</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#run-the-app-from-source" class="nav-link">Run the app from source</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
             <li class="nav-item" data-level="1"><a href="#a-few-notes-on-setting-up-an-environment-for-cone-development" class="nav-link">A few notes on setting up an environment for cone development</a>
               <ul class="nav flex-column">
               </ul>
@@ -151,6 +166,26 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
+<h2 id="projects-source-code">Project's source code</h2>
+<p>The source is available at <a href="https://github.com/bradyt/cone">https://github.com/bradyt/cone</a>.</p>
+<p>There is a <code>cone_android/</code> directory where the Flutter code for the
+Android app is.</p>
+<p>The <code>cone_lib/</code> directory contains Dart library code that could
+potentially be used for each of mobile apps, cli app, and maybe even
+web and desktop apps.</p>
+<p>There is also a <code>uri_picker/</code> directory, which contains a Flutter
+plugin for linking a file to the Android cone app. We'll attempt to
+extend that plugin to an iOS app. Not certain what will happen for
+web or desktop yet.</p>
+<h2 id="run-the-app-from-source">Run the app from source</h2>
+<p>First, make sure to
+<a href="https://flutter.dev/docs/get-started/install">install</a>
+<a href="https://flutter.dev/">Flutter</a>.</p>
+<p>After that, you can <a href="https://flutter.dev/docs/get-started/test-drive?tab=terminal#run-the-app-2">run the
+app</a>
+from the <code>cone_android/</code> directory.</p>
+<p>Replace <code>flutter run</code> with <code>flutter run --flavor=dev</code>. See
+<a href="https://github.com/flutter/flutter/issues/22856">https://github.com/flutter/flutter/issues/22856</a>.</p>
 <h1 id="a-few-notes-on-setting-up-an-environment-for-cone-development">A few notes on setting up an environment for cone development</h1>
 <ul>
 <li>go do the flutter install<ul>

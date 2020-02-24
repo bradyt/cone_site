@@ -36,26 +36,14 @@
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
                             <li class="navitem active">
-                                <a href="." class="nav-link">README</a>
+                                <a href="." class="nav-link">Home</a>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">wiki <b class="caret"></b></a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Wiki <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="wiki/Home/" class="dropdown-item">Home</a>
-</li>
-                                    
-<li>
-    <a href="wiki/TODOs/" class="dropdown-item">TODOs</a>
-</li>
-                                    
-<li>
-    <a href="wiki/SETUP/" class="dropdown-item">SETUP</a>
-</li>
-                                    
-<li>
-    <a href="wiki/Graphs/" class="dropdown-item">Graphs</a>
+    <a href="wiki/Home.md" class="dropdown-item">Home</a>
 </li>
                                     
 <li>
@@ -63,11 +51,28 @@
 </li>
                                     
 <li>
-    <a href="wiki/Localizations/" class="dropdown-item">Localizations</a>
+    <a href="wiki/Notes/" class="dropdown-item">Notes</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Development <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="development/TODOs/" class="dropdown-item">TODOs</a>
 </li>
                                     
 <li>
-    <a href="wiki/Notes/" class="dropdown-item">Notes</a>
+    <a href="development/SETUP/" class="dropdown-item">SETUP</a>
+</li>
+                                    
+<li>
+    <a href="development/Graphs/" class="dropdown-item">Graphs</a>
+</li>
+                                    
+<li>
+    <a href="development/Localizations/" class="dropdown-item">Localizations</a>
 </li>
                                 </ul>
                             </li>
@@ -85,7 +90,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="wiki/Home/" class="nav-link">
+                                <a rel="next" href="wiki/Mobile-ledgers/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -112,11 +117,7 @@
             
             <li class="nav-item" data-level="1"><a href="#cone" class="nav-link">cone</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#projects-source-code" class="nav-link">Project's source code</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#run-the-app-from-source" class="nav-link">Run the app from source</a>
+            <li class="nav-item" data-level="2"><a href="#table-of-contents" class="nav-link">Table of contents</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -135,26 +136,30 @@
 <a href="https://f-droid.org/packages/info.tangential.cone/"><img src="https://f-droid.org/badge/get-it-on.png"
      alt="Get it on F-Droid"
      height="80"></a></p>
-<h2 id="projects-source-code">Project's source code</h2>
-<p>The source is available at <a href="https://github.com/bradyt/cone">https://github.com/bradyt/cone</a>.</p>
-<p>There is a <code>cone_android/</code> directory where the Flutter code for the
-Android app is.</p>
-<p>The <code>cone_lib/</code> directory contains Dart library code that could
-potentially be used for each of mobile apps, cli app, and maybe even
-web and desktop apps.</p>
-<p>There is also a <code>uri_picker/</code> directory, which contains a Flutter
-plugin for linking a file to the Android cone app. We'll attempt to
-extend that plugin to an iOS app. Not certain what will happen for
-web or desktop yet.</p>
-<h2 id="run-the-app-from-source">Run the app from source</h2>
-<p>First, make sure to
-<a href="https://flutter.dev/docs/get-started/install">install</a>
-<a href="https://flutter.dev/">Flutter</a>.</p>
-<p>After that, you can <a href="https://flutter.dev/docs/get-started/test-drive?tab=terminal#run-the-app-2">run the
-app</a>
-from the <code>cone_android/</code> directory.</p>
-<p>Replace <code>flutter run</code> with <code>flutter run --flavor=dev</code>. See
-<a href="https://github.com/flutter/flutter/issues/22856">https://github.com/flutter/flutter/issues/22856</a>.</p></div>
+<p>The initial goal for cone, is to provide convenient data entry on the
+go, for users of plain text accounting. So for example, if you want to
+record entries like the following, this app might be for you.</p>
+<pre><code class="text">2020-02-23 Squishee
+  expenses:kwik-e-mart   10.00 USD
+  assets:bs:checking    -10.00 USD
+</code></pre>
+
+<h2 id="table-of-contents">Table of contents</h2>
+<ul>
+<li>Wiki<ul>
+<li><a href="wiki/Home">Home</a></li>
+<li><a href="wiki/Mobile-ledgers">Mobile ledgers</a></li>
+<li><a href="wiki/Notes">Notes</a></li>
+</ul>
+</li>
+<li>Development<ul>
+<li><a href="development/SETUP">SETUP</a></li>
+<li><a href="development/TODOs">TODOs</a></li>
+<li><a href="development/Graphs">Graphs</a></li>
+<li><a href="development/Localizations">Localizations</a></li>
+</ul>
+</li>
+</ul></div>
             </div>
         </div>
 
@@ -239,5 +244,5 @@ from the <code>cone_android/</code> directory.</p>
 
 <!--
 MkDocs version : 1.1
-Build Date UTC : 2020-02-24 02:00:36
+Build Date UTC : 2020-02-24 03:30:48
 -->
