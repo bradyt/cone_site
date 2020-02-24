@@ -9,91 +9,78 @@
         
         <link rel="shortcut icon" href="/img/favicon.ico">
         <title>cone</title>
-        <link href="/css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="/css/bootstrap.min.css" rel="stylesheet">
         <link href="/css/font-awesome.min.css" rel="stylesheet">
         <link href="/css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
         <link href="/css/org-mode.css" rel="stylesheet">
-        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
 
         <script src="/js/jquery-1.10.2.min.js" defer></script>
-        <script src="/js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="/js/bootstrap.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/dart.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
 
     <body>
-
-        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
-
-                <!-- Collapsed navigation -->
-                <div class="navbar-header">
-                    <!-- Expander button -->
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="/.">cone</a>
-                </div>
+                <a class="navbar-brand" href="/.">cone</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
                 <!-- Expanded navigation -->
-                <div class="navbar-collapse collapse">
+                <div id="navbar-collapse" class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
-                            <li >
-                                <a href="/.">README</a>
+                            <li class="navitem">
+                                <a href="/." class="nav-link">README</a>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">wiki <b class="caret"></b></a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">wiki <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
-<li >
-    <a href="/wiki/Home/">Home</a>
+<li>
+    <a href="/wiki/Home/" class="dropdown-item">Home</a>
 </li>
                                     
-<li >
-    <a href="/wiki/TODOs/">TODOs</a>
+<li>
+    <a href="/wiki/TODOs/" class="dropdown-item">TODOs</a>
 </li>
                                     
-<li >
-    <a href="/wiki/SETUP/">SETUP</a>
+<li>
+    <a href="/wiki/SETUP/" class="dropdown-item">SETUP</a>
 </li>
                                     
-<li >
-    <a href="/wiki/Graphs/">Graphs</a>
+<li>
+    <a href="/wiki/Graphs/" class="dropdown-item">Graphs</a>
 </li>
                                     
-<li >
-    <a href="/wiki/Mobile-ledgers/">Mobile ledgers</a>
+<li>
+    <a href="/wiki/Mobile-ledgers/" class="dropdown-item">Mobile ledgers</a>
 </li>
                                     
-<li >
-    <a href="/wiki/Localizations/">Localizations</a>
+<li>
+    <a href="/wiki/Localizations/" class="dropdown-item">Localizations</a>
 </li>
                                     
-<li >
-    <a href="/wiki/Notes/">Notes</a>
+<li>
+    <a href="/wiki/Notes/" class="dropdown-item">Notes</a>
 </li>
                                 </ul>
                             </li>
                         </ul>
 
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
-                            <li>
-                                <a href="https://github.com/bradyt/cone_site/"><i class="fa fa-github"></i> GitHub</a>
+                            <li class="nav-item">
+                                <a href="https://github.com/bradyt/cone_site/" class="nav-link"><i class="fa fa-github"></i> GitHub</a>
                             </li>
                     </ul>
                 </div>
@@ -101,6 +88,7 @@
         </div>
 
         <div class="container">
+            <div class="row">
 
     <div class="row-fluid">
       <div id="main-content" class="span12">
@@ -110,6 +98,7 @@
     </div>
 
 
+            </div>
         </div>
 
         <footer class="col-md-12">
@@ -124,19 +113,19 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" defer></script>
         <script src="/search/main.js" defer></script>
 
-        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
-    <div class="modal-dialog">
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
             </div>
             <div class="modal-body">
                 <p>
                     From here you can search these documents. Enter
                     your search terms below.
                 </p>
-                <form role="form">
+                <form>
                     <div class="form-group">
                         <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
                     </div>
@@ -147,12 +136,12 @@
             </div>
         </div>
     </div>
-</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
             </div>
             <div class="modal-body">
               <table class="table">
