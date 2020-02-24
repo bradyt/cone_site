@@ -22,7 +22,8 @@ record entries like the following, this app might be for you.
 ## Table of contents
 
 - Wiki
-    - [Home](wiki/Home)
+    - [Features](wiki/Features)
+    - [Links](wiki/Links)
     - [Mobile ledgers](wiki/Mobile-ledgers)
     - [Notes](wiki/Notes)
 - Development

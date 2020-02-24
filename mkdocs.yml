@@ -13,12 +13,13 @@ theme:
 nav:
     - Home: index.md
     - Wiki:
-        - Home: wiki/Home.md
+        - Features: wiki/Features.md
+        - Links: wiki/Links.md
         - Mobile ledgers: wiki/Mobile-ledgers.md
         - Notes: wiki/Notes.md
     - Development:
-        - TODOs: development/TODOs.md
         - SETUP: development/SETUP.md
+        - TODOs: development/TODOs.md
         - Graphs: development/Graphs.md
         - Localizations: development/Localizations.md
 
