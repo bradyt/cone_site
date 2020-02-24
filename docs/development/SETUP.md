@@ -27,9 +27,17 @@ Flutter's stable branch yet. I have been using `--device macos`
 locally to make some development easier. There is no file provider on
 web, we need a solution.
 
-# Linting
+## Contributing
 
-Use for example, `flutter analyze --watch`.
+_This section probably should be moved to PR templates._
+
+I believe any pull requests will be checked on Travis. This includes
+testing with the formatter, the analyzer, running tests, and checking
+code coverage. See `ci-script.sh` at base of project.
+
+Please also check conventions for formatting commits, spelling, and
+rebase your commits until they are clear. If a commit was added to fix
+another commit in your PR, please combine them.
 
 # Screenshots
 
@@ -37,30 +45,30 @@ In one terminal, use `flutter run`, and note the observatory uri.
 
 In a second terminal, use
 
-```
+```sh
 flutter screenshot --type=rasterizer --observatory-uri=<uri-from-above>
 ```
 
-# Notes on fdroid
+# F-Droid
 
 ## Make sure cone builds on fdroid
 
 As described at <https://gitlab.com/fdroid/fdroiddata/blob/master/CONTRIBUTING.md#building-it>, verify the following command runs successfully.
 
-```
+```sh
 fdroid build -v -l info.tangential.cone
 ```
 
 If it breaks, we either need to change the cone project, or the metadata at fdroiddata.
 
-## Modifying the metadata and fdroiddata
+## Modifying the metadata at fdroiddata
 
 - run fdroid executable from git
 - fetch upstream fdroiddata, merge master
 - update fdroiddata/metadata/info.tangential.cone.yml
 - run all the checks outlined at <https://gitlab.com/fdroid/fdroiddata/blob/master/CONTRIBUTING.md#building-it>
 
-```
+```sh
 fdroid readmeta
 fdroid rewritemeta info.tangential.cone
 fdroid checkupdates info.tangential.cone
@@ -68,21 +76,9 @@ fdroid lint info.tangential.cone
 fdroid build -v -l info.tangential.cone
 ```
 
-## New notes on fdroid
+# Google Play
 
-Mostly we need to make sure the build still works on fdroid. Use the following:
-
+```sh
+flutter clean
+flutter build appbundle
 ```
-fdroid -v -l info.tangential.cone
-```
-
-This is suggested by fdroiddata documentation, `CONTRIBUTING.md`.
-
-# Notes on pushing new version to google play
-
-Make sure the app signing keys are available. Do a flutter clean to
-make sure the app builds cleanly. Then flutter build appbundle. I
-usually create an internal release, to make sure things install
-correctly. Then it's more or less a toggle to put it on google play.
-And I think the total time of waiting is from time of upload to the
-internal release, so no time is really lost.
