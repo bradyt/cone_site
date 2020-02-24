@@ -5,20 +5,22 @@ edit_uri: ""
 
 theme:
     name: mkdocs
+    navigation_depth: 3
     highlightjs: true
     hljs_languages:
         - dart
 
 nav:
-    - README: README.md
-    - wiki:
+    - Home: index.md
+    - Wiki:
         - Home: wiki/Home.md
-        - TODOs: wiki/TODOs.md
-        - SETUP: wiki/SETUP.md
-        - Graphs: wiki/Graphs.md
         - Mobile ledgers: wiki/Mobile-ledgers.md
-        - Localizations: wiki/Localizations.md
         - Notes: wiki/Notes.md
+    - Development:
+        - TODOs: development/TODOs.md
+        - SETUP: development/SETUP.md
+        - Graphs: development/Graphs.md
+        - Localizations: development/Localizations.md
 
 extra_javascript:
     - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML

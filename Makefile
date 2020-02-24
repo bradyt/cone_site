@@ -1,10 +1,10 @@
-# all: serve todos
+all: serve todos
 
-# serve:
-# 	mkdocs serve
+serve:
+	mkdocs serve
 
 todos:
-	emacs -chdir docs/wiki -batch -l TODOs.el
+	emacs -chdir docs/development -batch -l TODOs.el
 
-# watch:
-# 	ls docs/wiki/TODOs.org | entr -c make
+watch:
+	ls docs/development/TODOs.org | entr -c make
