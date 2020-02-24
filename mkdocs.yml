@@ -1,5 +1,8 @@
 site_name: cone
 
+repo_url: https://github.com/bradyt/cone_site/
+edit_uri: ""
+
 theme:
     name: mkdocs
     highlightjs: true
