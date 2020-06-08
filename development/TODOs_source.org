@@ -1,6 +1,8 @@
 #+OPTIONS: toc:nil num:nil
 
-# (org-export-to-file 'html "TODOs.html" nil nil nil t)
+#+BEGIN_SRC elisp :exports none :results none
+(org-export-to-file 'html "TODOs_source.html" nil nil nil t)
+#+END_SRC
 
 * new todos (attempt to clean up old todos)
 

@@ -121,24 +121,8 @@
             
             <li class="nav-item" data-level="1"><a href="#features" class="nav-link">Features</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#data-entry" class="nav-link">Data entry</a>
+            <li class="nav-item" data-level="2"><a href="#journal-format" class="nav-link">Journal format</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="3"><a href="#date-field" class="nav-link">Date field</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="3"><a href="#description-field" class="nav-link">Description field</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="3"><a href="#account-field" class="nav-link">Account field</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="3"><a href="#quantity-and-commodity-fields" class="nav-link">Quantity and commodity fields</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
               </ul>
             </li>
               </ul>
@@ -149,49 +133,7 @@
                     <div class="col-md-9" role="main">
 
 <h1 id="features">Features</h1>
-<h2 id="data-entry">Data entry</h2>
-<p>Has editable text fields for date, description, and arbitrary number
-of postings, which each include account, quantity and
-currency/commodity.</p>
-<h3 id="date-field">Date field</h3>
-<p>Has a date picker button, which will insert date in the format
-<code>yyyy-MM-dd</code>, unless your most recent transaction date has a forward
-slash <code>/</code> or a period <code>.</code>.</p>
-<p>Users may wish we supported other date formats, like <code>dd.MM.yyyy</code>, but
-when there is a choice, we prefer to look at ledger files as a
-computer storage format, and there, ISO should be preferred. There is
-not a good way to determine between little-endian and middle-endian,
-without complicating the parsing step, etc. So this will not be a
-priority at this time. We will use big-endian at least for now. The
-only reason we broke from using <code>yyyy-MM-dd</code>, to other date
-separators, is because unfortunately, <code>yyyy/MM/dd</code> is the default in
-ledger-cli. Also, it didn't seem to cause too much extra work in
-parsing, which is still very much a work in progress. We would rather
-not complicate parsing unless we have a very good reason.</p>
-<p>We now have a feature that shows <code>Today</code> as hint text, so that, when
-you submit, this is translated to today's date in the big-endian
-format specified above.</p>
-<h3 id="description-field">Description field</h3>
-<p>It has some autocomplete dropdown. One drawback at the moment is, the
-choice of library does not seem to facilitate using a widget test yet.
-Whereas, I'd really like to see lots of tests in the project, to make
-it easier to modify the project.</p>
-<p>Also, this is apparently a pain point with respect to being usable for
-beancount users. I don't have experience with beancount, but I'd like
-to come up with a way to make the description field useable for both
-ledger/hledger users, <em>and</em> beancount users.</p>
-<h3 id="account-field">Account field</h3>
-<p>Also uses autocomplete dropdown.</p>
-<h3 id="quantity-and-commodity-fields">Quantity and commodity fields</h3>
-<h4 id="quantity-field">Quantity field</h4>
-<p>Will try to pad zeros before writing to file. For example, if your
-numberLocale was <code>ja</code>, then you might see <code>3 JPY</code> written as <code>3 JPY</code>,
-versus <code>3 USD</code> written as <code>3.00 USD</code>.</p>
-<p>If you set <code>numberLocale</code> to e.g. <code>de</code>, you will see commas as the
-decimal separator.</p>
-<h4 id="commodity-field">Commodity field</h4>
-<p>Shows default currency as hint text. If we can create a more useable
-data entry</p></div>
+<h2 id="journal-format">Journal format</h2></div>
             </div>
         </div>
 

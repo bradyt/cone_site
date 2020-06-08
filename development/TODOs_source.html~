@@ -1,7 +1,7 @@
 
-<div id="outline-container-org6b1bbd1" class="outline-2">
-<h2 id="org6b1bbd1">new todos (attempt to clean up old todos)</h2>
-<div class="outline-text-2" id="text-org6b1bbd1">
+<div id="outline-container-org0ffe27b" class="outline-2">
+<h2 id="org0ffe27b">new todos (attempt to clean up old todos)</h2>
+<div class="outline-text-2" id="text-org0ffe27b">
 <ul class="org-ul">
 <li class="off"><code>[&#xa0;]</code> present the three states for Notes.md as file diffs?</li>
 <li class="off"><code>[&#xa0;]</code> consider adding following links to wiki notes
@@ -75,12 +75,12 @@ discussion on distributing clis</li>
 </div>
 </div>
 
-<div id="outline-container-orgba2bdc1" class="outline-2">
-<h2 id="orgba2bdc1">old todos</h2>
-<div class="outline-text-2" id="text-orgba2bdc1">
+<div id="outline-container-orge7dcfc5" class="outline-2">
+<h2 id="orge7dcfc5">old todos</h2>
+<div class="outline-text-2" id="text-orge7dcfc5">
 </div>
-<div id="outline-container-org967cbc8" class="outline-3">
-<h3 id="todo-later"><a id="org967cbc8"></a><span class="todo TODO">TODO</span> later</h3>
+<div id="outline-container-orgfc6c3ac" class="outline-3">
+<h3 id="todo-later"><a id="orgfc6c3ac"></a><span class="todo TODO">TODO</span> later</h3>
 <div class="outline-text-3" id="text-todo-later">
 <ul class="org-ul">
 <li class="off"><code>[&#xa0;]</code> try flutter snapshots plugin to provide screenshots for fdroid</li>
@@ -173,8 +173,8 @@ purchases</li>
 </div>
 </div>
 
-<div id="outline-container-orgefc6701" class="outline-3">
-<h3 id="partially-done"><a id="orgefc6701"></a>partially done</h3>
+<div id="outline-container-org7100b5a" class="outline-3">
+<h3 id="partially-done"><a id="org7100b5a"></a>partially done</h3>
 <div class="outline-text-3" id="text-partially-done">
 <ul class="org-ul">
 <li class="off"><code>[&#xa0;]</code> clean up code in add transaction form</li>
@@ -182,8 +182,8 @@ purchases</li>
 </div>
 </div>
 
-<div id="outline-container-org2afd2ba" class="outline-3">
-<h3 id="done-or-partially-done-but-not-yet-on-master"><a id="org2afd2ba"></a><span class="done DONE">DONE</span> (or partially done) but not yet on master</h3>
+<div id="outline-container-org892ed35" class="outline-3">
+<h3 id="done-or-partially-done-but-not-yet-on-master"><a id="org892ed35"></a><span class="done DONE">DONE</span> (or partially done) but not yet on master</h3>
 <div class="outline-text-3" id="text-done-or-partially-done-but-not-yet-on-master">
 <ul class="org-ul">
 <li class="on"><code>[X]</code> update details of project to that of current <code>flutter create</code>

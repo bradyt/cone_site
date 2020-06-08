@@ -125,11 +125,10 @@
               <ul class="nav flex-column">
               </ul>
             </li>
+            <li class="nav-item" data-level="2"><a href="#contributing" class="nav-link">Contributing</a>
+              <ul class="nav flex-column">
               </ul>
             </li>
-            
-            <li class="nav-item" data-level="1"><a href="#linting" class="nav-link">Linting</a>
-              <ul class="nav flex-column">
               </ul>
             </li>
             
@@ -138,24 +137,20 @@
               </ul>
             </li>
             
-            <li class="nav-item" data-level="1"><a href="#notes-on-fdroid" class="nav-link">Notes on fdroid</a>
+            <li class="nav-item" data-level="1"><a href="#f-droid" class="nav-link">F-Droid</a>
               <ul class="nav flex-column">
             <li class="nav-item" data-level="2"><a href="#make-sure-cone-builds-on-fdroid" class="nav-link">Make sure cone builds on fdroid</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#modifying-the-metadata-and-fdroiddata" class="nav-link">Modifying the metadata and fdroiddata</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#new-notes-on-fdroid" class="nav-link">New notes on fdroid</a>
+            <li class="nav-item" data-level="2"><a href="#modifying-the-metadata-at-fdroiddata" class="nav-link">Modifying the metadata at fdroiddata</a>
               <ul class="nav flex-column">
               </ul>
             </li>
               </ul>
             </li>
             
-            <li class="nav-item" data-level="1"><a href="#notes-on-pushing-new-version-to-google-play" class="nav-link">Notes on pushing new version to google play</a>
+            <li class="nav-item" data-level="1"><a href="#google-play" class="nav-link">Google Play</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -194,48 +189,45 @@ officially supported yet; for example, macos and web are not on
 Flutter's stable branch yet. I have been using <code>--device macos</code>
 locally to make some development easier. There is no file provider on
 web, we need a solution.</p>
-<h1 id="linting">Linting</h1>
-<p>Use for example, <code>flutter analyze --watch</code>.</p>
+<h2 id="contributing">Contributing</h2>
+<p><em>This section probably should be moved to PR templates.</em></p>
+<p>I believe any pull requests will be checked on Travis. This includes
+testing with the formatter, the analyzer, running tests, and checking
+code coverage. See <code>ci-script.sh</code> at base of project.</p>
+<p>Please also check conventions for formatting commits, spelling, and
+rebase your commits until they are clear. If a commit was added to fix
+another commit in your PR, please combine them.</p>
 <h1 id="screenshots">Screenshots</h1>
 <p>In one terminal, use <code>flutter run</code>, and note the observatory uri.</p>
 <p>In a second terminal, use</p>
-<pre><code>flutter screenshot --type=rasterizer --observatory-uri=&lt;uri-from-above&gt;
+<pre><code class="sh">flutter screenshot --type=rasterizer --observatory-uri=&lt;uri-from-above&gt;
 </code></pre>
 
-<h1 id="notes-on-fdroid">Notes on fdroid</h1>
+<h1 id="f-droid">F-Droid</h1>
 <h2 id="make-sure-cone-builds-on-fdroid">Make sure cone builds on fdroid</h2>
 <p>As described at <a href="https://gitlab.com/fdroid/fdroiddata/blob/master/CONTRIBUTING.md#building-it">https://gitlab.com/fdroid/fdroiddata/blob/master/CONTRIBUTING.md#building-it</a>, verify the following command runs successfully.</p>
-<pre><code>fdroid build -v -l info.tangential.cone
+<pre><code class="sh">fdroid build -v -l info.tangential.cone
 </code></pre>
 
 <p>If it breaks, we either need to change the cone project, or the metadata at fdroiddata.</p>
-<h2 id="modifying-the-metadata-and-fdroiddata">Modifying the metadata and fdroiddata</h2>
+<h2 id="modifying-the-metadata-at-fdroiddata">Modifying the metadata at fdroiddata</h2>
 <ul>
 <li>run fdroid executable from git</li>
 <li>fetch upstream fdroiddata, merge master</li>
 <li>update fdroiddata/metadata/info.tangential.cone.yml</li>
 <li>run all the checks outlined at <a href="https://gitlab.com/fdroid/fdroiddata/blob/master/CONTRIBUTING.md#building-it">https://gitlab.com/fdroid/fdroiddata/blob/master/CONTRIBUTING.md#building-it</a></li>
 </ul>
-<pre><code>fdroid readmeta
+<pre><code class="sh">fdroid readmeta
 fdroid rewritemeta info.tangential.cone
 fdroid checkupdates info.tangential.cone
 fdroid lint info.tangential.cone
 fdroid build -v -l info.tangential.cone
 </code></pre>
 
-<h2 id="new-notes-on-fdroid">New notes on fdroid</h2>
-<p>Mostly we need to make sure the build still works on fdroid. Use the following:</p>
-<pre><code>fdroid -v -l info.tangential.cone
-</code></pre>
-
-<p>This is suggested by fdroiddata documentation, <code>CONTRIBUTING.md</code>.</p>
-<h1 id="notes-on-pushing-new-version-to-google-play">Notes on pushing new version to google play</h1>
-<p>Make sure the app signing keys are available. Do a flutter clean to
-make sure the app builds cleanly. Then flutter build appbundle. I
-usually create an internal release, to make sure things install
-correctly. Then it's more or less a toggle to put it on google play.
-And I think the total time of waiting is from time of upload to the
-internal release, so no time is really lost.</p></div>
+<h1 id="google-play">Google Play</h1>
+<pre><code class="sh">flutter clean
+flutter build appbundle
+</code></pre></div>
             </div>
         </div>
 
