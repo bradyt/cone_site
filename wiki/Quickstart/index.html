@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>Graphs - cone</title>
+        <title>Quickstart - cone</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -39,45 +39,45 @@
                             <li class="navitem">
                                 <a href="../.." class="nav-link">Home</a>
                             </li>
-                            <li class="dropdown">
+                            <li class="dropdown active">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Wiki <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../../wiki/Quickstart/" class="dropdown-item">Quickstart</a>
+    <a href="./" class="dropdown-item active">Quickstart</a>
 </li>
                                     
 <li>
-    <a href="../../wiki/Links/" class="dropdown-item">Links</a>
+    <a href="../Links/" class="dropdown-item">Links</a>
 </li>
                                     
 <li>
-    <a href="../../wiki/Mobile-ledgers/" class="dropdown-item">Mobile ledgers</a>
+    <a href="../Mobile-ledgers/" class="dropdown-item">Mobile ledgers</a>
 </li>
                                     
 <li>
-    <a href="../../wiki/Notes/" class="dropdown-item">Notes</a>
+    <a href="../Notes/" class="dropdown-item">Notes</a>
 </li>
                                 </ul>
                             </li>
-                            <li class="dropdown active">
+                            <li class="dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Development <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../SETUP/" class="dropdown-item">SETUP</a>
+    <a href="../../development/SETUP/" class="dropdown-item">SETUP</a>
 </li>
                                     
 <li>
-    <a href="../TODOs/" class="dropdown-item">TODOs</a>
+    <a href="../../development/TODOs/" class="dropdown-item">TODOs</a>
 </li>
                                     
 <li>
-    <a href="./" class="dropdown-item active">Graphs</a>
+    <a href="../../development/Graphs/" class="dropdown-item">Graphs</a>
 </li>
                                     
 <li>
-    <a href="../Localizations/" class="dropdown-item">Localizations</a>
+    <a href="../../development/Localizations/" class="dropdown-item">Localizations</a>
 </li>
                                 </ul>
                             </li>
@@ -90,12 +90,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../TODOs/" class="nav-link">
+                                <a rel="prev" href="../.." class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../Localizations/" class="nav-link">
+                                <a rel="next" href="../Links/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -119,22 +119,27 @@
     
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#quickstart-guide" class="nav-link">Quickstart guide</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
         </ul>
     </div>
 </div></div>
                     <div class="col-md-9" role="main">
 
-<pre><code>pub global activate dcdg
-dcdg --package ../cone &gt; cone.uml
-
-brew install plantuml
-plantuml -tlatex cone.uml
-
-# pdflatex (e.g., MacTeX)
-pdflatex 
-</code></pre>
-
-<p><a href="/files/cone.pdf">cone.pdf</a></p></div>
+<h1 id="quickstart-guide">Quickstart guide</h1>
+<p>First you'll need to link a file to record your transactions too.</p>
+<p>A recommended format is a plain text file with a <code>.txt</code> extension.</p>
+<p>Currently, cone does not provide a function to create a new file on your system. And even when it does, unfortunately this is in general difficult for users to do on iOS and Android, and not implemented by all cloud providers.</p>
+<p>So for you convenience, we provide a t</p>
+<p>To get started, you'll need to link a file to the app.</p>
+<p>Plain text files with extension <code>.txt</code> is a good way to start.</p>
+<p>It's not always easy to create such a file on iOS and Android, so for your convenience, you can download one here:</p>
+<ul>
+<li><a href="../your-plain-text-journal.txt" download>your-plain-text-journal.txt</a></li>
+</ul></div>
             </div>
         </div>
 
