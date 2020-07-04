@@ -1,3 +1,11 @@
-div.col-md-3 {
-    display: none;
+/* div.col-md-3 { */
+/*     display: none; */
+/* } */
+
+blockquote {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 40px;
+    margin-right: 40px;
 }

@@ -33,3 +33,4 @@ markdown_extensions:
 
 extra_css:
   - css/org-mode.css
+  - css/extra.css
