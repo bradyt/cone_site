@@ -1,3 +1,7 @@
+help:
+	@echo "  serve   ==> mkdocs serve"
+	@echo "  deploy  ==> mkdocs deploy"
+
 all: todos serve
 
 serve:
