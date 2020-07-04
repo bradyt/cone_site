@@ -13,7 +13,8 @@ theme:
 nav:
     - Home: index.md
     - Wiki:
-        - Features: wiki/Features.md
+        - Quickstart: wiki/Quickstart.md
+        # - Features: wiki/Features.md
         - Links: wiki/Links.md
         - Mobile ledgers: wiki/Mobile-ledgers.md
         - Notes: wiki/Notes.md
@@ -22,6 +23,8 @@ nav:
         - TODOs: development/TODOs.md
         - Graphs: development/Graphs.md
         - Localizations: development/Localizations.md
+    # - About:
+    #     - Privacy policy: privacypolicy.md
 
 extra_javascript:
     - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML
