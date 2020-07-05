@@ -27,6 +27,10 @@ Flutter's stable branch yet. I have been using `--device macos`
 locally to make some development easier. There is no file provider on
 web, we need a solution.
 
+### Android specific
+
+If you get `command not found: adb`, try something like `export PATH="$PATH:/Users/alice/Library/Android/sdk/platform-tools"`
+
 ## Contributing
 
 _This section probably should be moved to PR templates._
@@ -81,4 +85,15 @@ fdroid build -v -l info.tangential.cone
 ```sh
 flutter clean
 flutter build appbundle
+```
+
+# fastlane
+
+```sh
+cd cone_flutter/android
+echo 'source "https://rubygems.org"\n\ngem "fastlane"' > Gemfile
+gem install --user-install bundler
+bundle config set path 'vendor/bundle'
+bundle install
+echo '\n/vendor/bundle/' >> .gitignore
 ```
