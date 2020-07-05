@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>Quickstart - cone</title>
+        <title>Getting started - cone</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -39,12 +39,12 @@
                             <li class="navitem">
                                 <a href="../.." class="nav-link">Home</a>
                             </li>
-                            <li class="dropdown active">
+                            <li class="dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Wiki <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="./" class="dropdown-item active">Quickstart</a>
+    <a href="../Getting-Started.md" class="dropdown-item">Getting Started</a>
 </li>
                                     
 <li>
@@ -90,16 +90,6 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../.." class="nav-link">
-                                    <i class="fa fa-arrow-left"></i> Previous
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a rel="next" href="../Links/" class="nav-link">
-                                    Next <i class="fa fa-arrow-right"></i>
-                                </a>
-                            </li>
-                            <li class="nav-item">
                                 <a href="https://github.com/bradyt/cone_site/" class="nav-link"><i class="fa fa-github"></i> GitHub</a>
                             </li>
                     </ul>
@@ -120,6 +110,15 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
+            <li class="nav-item" data-level="1"><a href="#getting-started" class="nav-link">Getting started</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="3"><a href="#but-what-is-it" class="nav-link">But what is it?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
             <li class="nav-item" data-level="1"><a href="#quickstart-guide" class="nav-link">Quickstart guide</a>
               <ul class="nav flex-column">
               </ul>
@@ -129,17 +128,36 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
+<h1 id="getting-started">Getting started</h1>
+<h3 id="but-what-is-it">But what is it?</h3>
+<p>The mobile apps for Android and iOS, <code>cone</code>, help users write plain text financial transactions to a text file, to a location on their phone, like "Documents", "Google Drive", "On My iPhone", or "iCloud Drive".</p>
+<p>Here are a couple of example transactions.</p>
+<pre><code class="text">2020-07-04 Springfield Market
+    expenses:food:groceries             120.96 USD
+    assets:wallet:cash                   60.00 USD
+    assets:springfield_bank:checking   -180.96 USD
+
+2020-07-05 Farmer's Market
+    expenses:food:groceries              22.86 USD
+    assets:wallet:cash                  -22.86 USD
+</code></pre>
+
+<p>There is existing software for the personal computer that can parse these files and calculate all sorts of balances, registers and reports. We hope to add a few of these features to the mobile <code>cone</code> app in the not too distant future. A very simple account tree with all balances, will likely be one of the first such features.</p>
+<p>Note that you are in relative control of your data. That is one of the key features of this file format, where the original such file format was invented by John Wiegley in 2003.</p>
+<p>Note that these tools are free, and you can expect your data to be future proof. You do not have a monthly or yearly subscription. You can always print out these text files for secure and physical archives, or to some degree, print them out and hand them to your accountant. Though usually you can customize a report to your accountant's preferences.</p>
+<p>These plain text financial formats tend to appeal more to software engineers, for their personal accounting. But the format has captivated a larger audience, such as people that like to tinker, hobby, or just see features they prefer in this format. If you are curious, I understand this format is not very often used within large companies, as they will usually invest in enterprise software, but usage in small businesses seems fairly common.</p>
 <h1 id="quickstart-guide">Quickstart guide</h1>
-<p>First you'll need to link a file to record your transactions too.</p>
-<p>A recommended format is a plain text file with a <code>.txt</code> extension.</p>
-<p>Currently, cone does not provide a function to create a new file on your system. And even when it does, unfortunately this is in general difficult for users to do on iOS and Android, and not implemented by all cloud providers.</p>
-<p>So for you convenience, we provide a t</p>
-<p>To get started, you'll need to link a file to the app.</p>
-<p>Plain text files with extension <code>.txt</code> is a good way to start.</p>
-<p>It's not always easy to create such a file on iOS and Android, so for your convenience, you can download one here:</p>
+<p>The first step for using the <code>cone</code> app, is to associate an empty text file, or an existing ledger file in one of the ledger formats, such as ledger-cli's, etc.</p>
+<p>If your version of <code>cone</code> is <code>0.2.20</code> or older, you'll have to use some other method to create that text file. In case you are having difficulty with that, here is a text file you can download:</p>
 <ul>
 <li><a href="../your-plain-text-journal.txt" download>your-plain-text-journal.txt</a></li>
-</ul></div>
+</ul>
+<p>On newer versions of <code>cone</code>, there should be a button to create a new empty text file and save it to one of your phone's storage location. Note that this uses a different method than the original method that picks an existing file, and many cloud providers have not implemented this feature. A workaround could be to use "Create new file" to put on "Documents" or "On My iPhone", then use your "Files" app to move that new file to your desired location, then switch back to <code>cone</code> and use the usual "Pick existing file" feature to link from that cloud location.</p>
+<p>Really it's amusing that Android and iOS do not make it easier to create a new empty text file.</p>
+<p>Now that you have a file linked to <code>cone</code>, you can add transactions. If you are using this app on the go, you could consider just taking receipts at point of sale, then when you have a moment sitting down, transfer the information from the receipt to your journal.</p>
+<p>If your transaction is similar to an existing one, note there is a copy feature in <code>cone</code>, where you can select an existing transaction and then copy it into the data entry field, and then edit the values that have changed. Note that <code>cone</code> will otherwise only update the date of the transaction to today's date.</p>
+<p>We hope to come up with more elegant solutions to entering data quickly.</p>
+<p>I hope you enjoy this app, at least as an interesting experiment in what this sort of app might be on mobile devices.</p></div>
             </div>
         </div>
 
