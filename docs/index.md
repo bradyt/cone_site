@@ -22,7 +22,7 @@ record entries like the following, this app might be for you.
 ## Table of contents
 
 - Wiki
-    - [Getting-Started](wiki/Getting-Started)
+    - [Getting-started](wiki/Getting-started)
     <!-- - [Features](wiki/Features) -->
     - [Links](wiki/Links)
     - [Mobile ledgers](wiki/Mobile-ledgers)
