@@ -13,7 +13,8 @@ theme:
 nav:
     - Home: index.md
     - Wiki:
-        - Quickstart: wiki/Quickstart.md
+        - Getting Started: wiki/Getting-Started.md
+        # - Quickstart: wiki/Quickstart.md
         # - Features: wiki/Features.md
         - Links: wiki/Links.md
         - Mobile ledgers: wiki/Mobile-ledgers.md
