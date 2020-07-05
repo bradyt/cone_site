@@ -124,6 +124,10 @@
               <ul class="nav flex-column">
             <li class="nav-item" data-level="2"><a href="#run-app-from-source" class="nav-link">Run app from source</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="3"><a href="#android-specific" class="nav-link">Android specific</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
             <li class="nav-item" data-level="2"><a href="#contributing" class="nav-link">Contributing</a>
@@ -152,6 +156,11 @@
             </li>
             
             <li class="nav-item" data-level="1"><a href="#google-play" class="nav-link">Google Play</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#fastlane" class="nav-link">fastlane</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -190,6 +199,8 @@ officially supported yet; for example, macos and web are not on
 Flutter's stable branch yet. I have been using <code>--device macos</code>
 locally to make some development easier. There is no file provider on
 web, we need a solution.</p>
+<h3 id="android-specific">Android specific</h3>
+<p>If you get <code>command not found: adb</code>, try something like <code>export PATH="$PATH:/Users/alice/Library/Android/sdk/platform-tools"</code></p>
 <h2 id="contributing">Contributing</h2>
 <p><em>This section probably should be moved to PR templates.</em></p>
 <p>I believe any pull requests will be checked on Travis. This includes
@@ -228,6 +239,15 @@ fdroid build -v -l info.tangential.cone
 <h1 id="google-play">Google Play</h1>
 <pre><code class="sh">flutter clean
 flutter build appbundle
+</code></pre>
+
+<h1 id="fastlane">fastlane</h1>
+<pre><code class="sh">cd cone_flutter/android
+echo 'source &quot;https://rubygems.org&quot;\n\ngem &quot;fastlane&quot;' &gt; Gemfile
+gem install --user-install bundler
+bundle config set path 'vendor/bundle'
+bundle install
+echo '\n/vendor/bundle/' &gt;&gt; .gitignore
 </code></pre></div>
             </div>
         </div>
