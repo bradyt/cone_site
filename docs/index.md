@@ -2,6 +2,7 @@
 
 A mobile ledger-like.
 
+<a href="https://apps.apple.com/us/app/cone-a-ledger/id1517331959?mt=8" style="display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/en-us/badge-lrg.svg?releaseDate=2020-07-06&kind=iossoftware&bubble=ios_apps) no-repeat;width:135px;height:40px;"></a>
 [<img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png"
      alt="Get it on Google Play"
      height="80">](https://play.google.com/store/apps/details?id=info.tangential.cone)
